@@ -1,0 +1,79 @@
+select *
+from employees as e
+left join vacations as v 
+	on e.id = v.employeeid
+	and year(v.RequestDate) = '2008' 
+	and status = 'approved'
+where v.employeeid is null
+
+-- 0. retrieve all employees along with their department
+select e.name as EmployeeName, d.name as DepartmentName, e.salary
+from employees as e
+left join departments as d 
+	on e.DepartmentId = d.id
+
+-- 1. retrieve all employees along with their manager
+
+
+-- 2. retrieve all employees that have requested a vacation between 01.01.2011 and 01.01.2012
+
+select e.name, v.requestdate, v.status
+from employees as e
+join vacations as v on e.id = v.employeeid
+where year(v.requestdate) = 2011
+
+
+
+-- 3.1. Write an SQL query to find the average salary in the "Marketing" department.
+
+select avg(e.salary)
+from departments d
+join employees e on d.Id = e.DepartmentId
+where d.name = 'Marketing'
+
+
+			
+-- 3.2. Write an SQL query to find the average salary in the department which name start with 'a'.			
+
+
+-- 4. Write an SQL query to find the first 10 employees joined the company (select EmployeeName and DepartmentName)
+
+
+-- 5. Write a SQL query to find the names of all employees from the departments "Quality Assurance" or "Marketing" whose hire year is between 2005 and 2009 (2 - subselect and join)
+
+
+-- 6. Write an SQL query to find the employees that have more than two certificates
+
+
+
+-- 7. select all employee names along with number of their certificates
+
+
+-- 8. select all departments without employees 
+
+
+-- 9. select skills that are assigned to at least one employee with title 'Software Engineer'
+
+
+
+-- 10. Write an SQL query to find for each department and for each job title the total number of employees. 
+
+
+-- 11. Write an SQL query to find all managers that have exactly 3 employees. Display their names and the name and their department. 
+
+
+
+-- 12. Print the number of vacations per department per years requested between 2008 and 2012 along with the name of the department
+
+
+
+-- 13. select all employees that have more skills than certificates
+
+
+
+-- 14. select employees with a salary higher than that of 'Didi Marinova' (2 - subselect and join)
+
+
+
+-- 15. select employees with maximum salary (2 - subselect and left join)
+

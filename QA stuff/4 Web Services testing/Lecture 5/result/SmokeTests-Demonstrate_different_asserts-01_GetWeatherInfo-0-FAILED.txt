@@ -1,0 +1,184 @@
+Status: FAILED
+Time Taken: 5409
+Size: 5197
+Timestamp: Mon May 30 01:04:35 EEST 2016
+TestStep: 01. GetWeatherInfo
+
+----------------- Messages ------------------------------
+[Response SLA] Response did not meet SLA 3670/2000
+
+----------------- Properties ------------------------------
+Encoding: UTF-8
+Endpoint: http://wsf.cdyne.com/WeatherWS/Weather.asmx
+
+---------------- Request ---------------------------
+Request Headers: Host : wsf.cdyne.com
+Content-Length : 239
+SOAPAction : "http://ws.cdyne.com/WeatherWS/GetWeatherInformation"
+Accept-Encoding : gzip,deflate
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Connection : Keep-Alive
+Content-Type : text/xml;charset=UTF-8
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:weat="http://ws.cdyne.com/WeatherWS/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <weat:GetWeatherInformation/>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+Response Headers: X-AspNet-Version : 2.0.50727
+Date : Sun, 29 May 2016 22:04:34 GMT
+#status# : HTTP/1.1 200 OK
+Content-Length : 5197
+Content-Type : text/xml; charset=utf-8
+X-Powered-By : ASP.NET
+Server : Microsoft-IIS/7.5
+Cache-Control : private, max-age=0
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetWeatherInformationResponse xmlns="http://ws.cdyne.com/WeatherWS/">
+         <GetWeatherInformationResult>
+            <WeatherDescription>
+               <WeatherID>1</WeatherID>
+               <Description>Thunder Storms</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/thunderstorms.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>2</WeatherID>
+               <Description>Partly Cloudy</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/partlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>3</WeatherID>
+               <Description>Mostly Cloudy</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/mostlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>4</WeatherID>
+               <Description>Sunny</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/sunny.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>5</WeatherID>
+               <Description>Rain</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/rain.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>6</WeatherID>
+               <Description>Showers</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/showers.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>7</WeatherID>
+               <Description>Haze</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/haze.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>9</WeatherID>
+               <Description>Partly Sunny</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/mostlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>10</WeatherID>
+               <Description>Mostly Sunny</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/partlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>11</WeatherID>
+               <Description>Clear</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/sunny.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>12</WeatherID>
+               <Description>Fair</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/partlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>14</WeatherID>
+               <Description>Cloudy</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/mostlycloudy.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>15</WeatherID>
+               <Description>N/A</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/na.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>17</WeatherID>
+               <Description>Drizzle</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/drizzle.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>18</WeatherID>
+               <Description>Fog</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/fog.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>20</WeatherID>
+               <Description>Flurries</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/blowingsnow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>21</WeatherID>
+               <Description>Snow and Fog</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/blowingsnow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>26</WeatherID>
+               <Description>Blowing Snow and Fog</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/blowingsnow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>27</WeatherID>
+               <Description>Snow</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/snow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>28</WeatherID>
+               <Description>Rain and Fog</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/rain.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>29</WeatherID>
+               <Description>Blowing Snow</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/blowingsnow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>32</WeatherID>
+               <Description>Light Rain</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/rain.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>33</WeatherID>
+               <Description>Heavy Rain</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/rain.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>34</WeatherID>
+               <Description>Missing Data</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/na.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>35</WeatherID>
+               <Description>Snow, Blowing Snow, and Fog</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/blowingsnow.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>36</WeatherID>
+               <Description>Unknown Precipitation</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/na.gif</PictureURL>
+            </WeatherDescription>
+            <WeatherDescription>
+               <WeatherID>37</WeatherID>
+               <Description>AM CLOUDS</Description>
+               <PictureURL>http://wsf.cdyne.com/WeatherWS/Images/partlycloudy.gif</PictureURL>
+            </WeatherDescription>
+         </GetWeatherInformationResult>
+      </GetWeatherInformationResponse>
+   </soap:Body>
+</soap:Envelope>

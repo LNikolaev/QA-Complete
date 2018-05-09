@@ -1,0 +1,40 @@
+Because free resources on the web are too dynamic, it will be live demo with some of this:
+
+http://numbersapi.com/
+https://developer.github.com/v3/users/#get-all-users
+http://www.jsontest.com/
+http://jsonplaceholder.typicode.com/
+https://www.npmjs.com/package/json-server
+
+In case of GitHub:
+API ref and samples: https://developer.github.com/v3/
+
+All users:
+https://api.github.com/users
+
+All repositories in Telerik organization:
+https://api.github.com/orgs/telerik/repos
+
+All closed issues in NativeScript repo:
+https://api.github.com/repos/NativeScript/NativeScript/issues?state=closed
+
+All closed reported by me:
+https://api.github.com/repos/NativeScript/NativeScript/issues?state=closed&author=dtopuzov
+
+1. Install Postman web app
+2. Install Newman
+- This is nodejs app and needs nodejs, please get latest stable from here: https://nodejs.org/en/download/
+- After nodejs is installed, open a console and run:
+npm install -g newman
+- To verify newman isntallation:
+newman -h
+3. Show portman GUI
+- Send requet
+- Add verifications
+- Show variables
+- Console.log() to debug -> chrome://inspect/#apps -> select postman
+4. Export tests
+5. Run postman via commandline
+- Examples:
+newman -c Lecture-04-Homework-Everlive-JustDemo
+newman -u https://www.getpostman.com/collections/da7f69fac69caa22dc63

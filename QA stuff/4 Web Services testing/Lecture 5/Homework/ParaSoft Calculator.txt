@@ -1,0 +1,5 @@
+Write tests for all operations of ParaSoft Calculator
+- At least 1 positive and one negative
+- Make tests data driven
+
+WSDL: http://soaptest.parasoft.com/calculator.wsdl

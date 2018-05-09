@@ -1,0 +1,72 @@
+<testdata>
+	<test optionLabel="Academic Divisions" title="Division Offices"/>
+	<test optionLabel="Academic Senate" title="Foothill College Academic Senate Web Site Home Page"/>
+	<test optionLabel="Accreditation" title="Foothill College Accreditation"/>
+	<test optionLabel="ADA Compliance" title="College Policies | Foothill College"/>
+	<test optionLabel="Admissions & Registration" title="Admissions & Registration I Foothill College"/>
+	<test optionLabel="Apprenticeship Programs" title="Foothill College Apprenticeship Programs"/>
+	<test optionLabel="Astronomy" title="Foothill College Astronomy Program"/>
+	<test optionLabel="Athletics" title="Foothill College Athletic Program"/>
+	<test optionLabel="BioHealth Division" title="Foothill College Biological & Health Sciences Division"/>
+	<test optionLabel="Bookstore" title="Home"/>
+	<test optionLabel="Business & Social Sciences" title="Business and Social Sciences Division, Foothill College"/>
+	<test optionLabel="Calendar" title="Calendar & News"/>
+	<test optionLabel="Campus Life" title="Campus Life"/>
+	<test optionLabel="Catalog" title="Foothill Online Searchable Course Catalog"/>
+	<test optionLabel="Career Services" title="Foothill College Career Planning"/>
+	<test optionLabel="Celebrity Forum" title="Celebrity Forum Home"/>
+	<test optionLabel="Classified Senate" title="Foothill College Classified Senate"/>
+	<test optionLabel="Clubs" title="Campus Clubs"/>
+	<test optionLabel="College & Career Connections" title="Foothill College Career Connections"/>
+	<test optionLabel="Computer Courses" title="Foothill College Computer Science Department"/>
+	<test optionLabel="Construction Updates" title="Measures C Construction Update"/>
+	<test optionLabel="Counseling" title="Counseling and Education Planning::Foothill College"/>
+	<test optionLabel="Crime Awareness" title="Foothill College Student Right-to-Know"/>
+	<test optionLabel="Degrees & Programs" title="Degrees, Certificates & Transfer Programs"/>
+	<test optionLabel="Disability Resources" title="Disability Resource Center | DRC Services"/>
+	<test optionLabel="Directory" title="Faculty and Staff Directory | Foothill College"/>
+	<test optionLabel="Employment Services" title="Employment Services"/>
+	<test optionLabel="English" title="Foothill College Language Arts Staff Resources"/>
+	<test optionLabel="EOPS" title="EOPS Home"/><test optionLabel="Etudes" title=""/>
+	<test optionLabel="Family Engagement Institute" title="Foothill College - Family Engagement Institute (FEI) Program"/>
+	<test optionLabel="Financial Aid" title="Foothill College Financial Aid"/>
+	<test optionLabel="Final Exams" title="Final Exam Schedule | Foothill College"/>
+	<test optionLabel="Fine Arts and Communication" title="Fine Arts and Communication Division"/>
+	<test optionLabel="Foothill Global Access" title="Foothill Global Access"/>
+	<test optionLabel="Forms" title="Admissions and Registration"/>
+	<test optionLabel="Graduation" title="Foothill College Graduation & Commencement Ceremony F A Q"/>
+	<test optionLabel="Graphic Design" title="Foothill College Graphic & Interactive Design"/>
+	<test optionLabel="Health Careers" title="Foothill College Biological & Health Sciences Division"/>
+	<test optionLabel="Health Services" title="Health Services Index"/>
+	<test optionLabel="Honors" title="Foothill College Honors Program"/>
+	<test optionLabel="Instruction Office" title="Foothill College Office of Instruction and Institutional Research"/>
+	<test optionLabel="Internship Program" title="Foothill College - Internship Program"/>
+	<test optionLabel="Krause Center" title="Krause Center for Innovation | Inspire. Educate. Empower."/>
+	<test optionLabel="Language Arts" title="Foothill College Language Arts Staff Resources"/>
+	<test optionLabel="Student Learning Outcomes" title="Foothill College Learning Outcomes"/>
+	<test optionLabel="Library" title="Foothill College Library"/>
+	<test optionLabel="Maps & Directions" title="Campus Maps | Foothill College"/>
+	<test optionLabel="Math (PSME)" title="Foothill College Physical Sciences, Mathematics and Engineering Department"/>
+	<test optionLabel="Middlefield Campus" title="Middlefield Campus, Foothill College"/>
+	<test optionLabel="Middle College" title="Foothill College Middle College Program"/>
+	<test optionLabel="Mission Statement" title="President's Mission Statement - Foothill College"/>
+	<test optionLabel="Music" title="Foothill College Music Department"/>
+	<test optionLabel="Music Technology" title="Foothill College Music Technology Department"/>
+	<test optionLabel="News" title="Calendar & News"/>
+	<test optionLabel="Non Credit Division" title="Non Credit Division | Foothill College"/>
+	<test optionLabel="Pass the Torch" title="Pass The Torch"/>
+	<test optionLabel="Physical Education" title="Foothill College Athletic Program"/>
+	<test optionLabel="Placement Testing" title="Foothill College Placement/Testing Office"/>
+	<test optionLabel="Police" title="FHDA DIstrict Police"/>
+	<test optionLabel="President's Office" title="President's Office, Foothill College"/>
+	<test optionLabel="Psychological Services" title="Psychological Services & Personal Counseling"/>
+	<test optionLabel="Puente Program" title="Puente at Foothill College"/>
+	<test optionLabel="Research" title="Foothill College Office of Instruction and Institutional Research"/>
+	<test optionLabel="Schedule of Classes" title="Foothill Online Searchable Class Schedule"/>
+	<test optionLabel="Student Affairs" title="Office of Student Affairs | Foothill College"/>
+	<test optionLabel="Sustainability" title="Sustainability at Foothill"/>
+	<test optionLabel="Theatre" title="Foothill College Theatre Arts Department"/>
+	<test optionLabel="Transfer" title="Foothill College Transfer Center"/>
+	<test optionLabel="Tutorial Center" title="Tutorial Center"/>
+	<test optionLabel="Veterans Information" title="Foothill College Veterans Resource Center"/>
+</testdata> 

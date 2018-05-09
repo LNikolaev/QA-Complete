@@ -1,0 +1,55 @@
+
+-- 1. select all rows from the Department table
+select * from Departments;
+
+-- 2. select only the Name and ParentId column from the Departments table
+select Name,ParentId from Departments;
+
+-- 3. select all employee names from the Employees table and rename the column in the result to Employee_Name
+select Name as Employee_Name from Employees;
+
+-- 4. select name from employee and add 300 to the Salary column as the Increased_Salary column
+select Name, Salary + 300 as Increased_Salary, Salary
+from employees;
+
+-- 5. select only the distinct values from the JobPositionId column in the Job_Candidate table
+select distinct JobPositionId from Job_Candidates;
+
+-- 6. retrieve the Name and Email  of all employees - combine the result in a single column with name 'record' in the format 'Name:Email'
+select concat(name, ":",salary,":",hiredate) record from employees;
+
+-- 7. select all rows from the Department table where the name is 'Software Engineering'
+select * from Departments where name = 'Software Engineering';
+
+-- 8. select all employees with salary higher than 2000 and hired after '2010-01-01'
+select * from Employees where Salary > 2000 AND HireDate >  '2010-01-01';
+
+-- 9. Write an SQL query to find the names of all employees whose salary is in the range [1000...2000].
+select * from Employees where Salary between 1000 and 2000;
+
+-- 10. select all employees with a salary of 2000, 2500 or 3000
+select * from Employees where Salary in (2000, 2500, 3000);
+
+-- 11. select all employee whose name starts with 'St'
+select * from Employees where Name like 'St%';
+
+-- 12. select all employee whose name does not contains the character sequence 'St'
+select * from Employees where Name not like '%St%';
+
+-- 13. select all employees that don't have a manager
+select Name from Employees where ManagerId is null;
+
+-- 14. select all employees that have a manager
+select Name from Employees where ManagerId is not null;
+
+-- 15. select all employees ordered in ascending order by salary
+select * from Employees order by Salary;
+
+-- 16. select all employees ordered in descending order by name and ascending order by salary
+select * from Employees order by Name desc, Salary;
+
+-- 17. select top 5 employees by highest salary
+select * from Employees order by Salary desc limit 5;
+
+-- 18. retrieve the Name, Email and HireDate of all employees that have hired in 2008 - combine the result in a single column with name 'record' in the format 'Name:Email:HireDate'
+select concat(name, ":",salary,":",hiredate) record from employees where hiredate >= "2008-01-01" and hiredate < "2009-01-01";

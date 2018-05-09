@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weatherdata>
+   <location>
+      <name>London</name>
+      <type />
+      <country>CA</country>
+      <timezone />
+      <location altitude="0" latitude="42.983391" longitude="-81.23304" geobase="geonames" geobaseid="0" />
+   </location>
+   <credit />
+   <meta>
+      <lastupdate />
+      <calctime>0.0571</calctime>
+      <nextupdate />
+   </meta>
+   <sun rise="2015-05-09T10:07:43" set="2015-05-10T00:34:59" />
+   <forecast>
+      <time day="2015-05-09">
+         <symbol number="500" name="light rain" var="10d" />
+         <precipitation value="0.57" type="rain" />
+         <windDirection deg="185" code="S" name="South" />
+         <windSpeed mps="6.2" name="Moderate breeze" />
+         <temperature day="29.4" min="20.85" max="30.25" night="20.85" eve="27.47" morn="22.86" />
+         <pressure unit="hPa" value="993.55" />
+         <humidity value="51" unit="%" />
+         <clouds value="scattered clouds" all="44" unit="%" />
+      </time>
+      <time day="2015-05-10">
+         <symbol number="502" name="heavy intensity rain" var="10d" />
+         <precipitation value="12.13" type="rain" />
+         <windDirection deg="222" code="SW" name="Southwest" />
+         <windSpeed mps="4.66" name="Gentle Breeze" />
+         <temperature day="27.25" min="18.38" max="27.25" night="18.38" eve="21.59" morn="19.3" />
+         <pressure unit="hPa" value="992.54" />
+         <humidity value="66" unit="%" />
+         <clouds value="broken clouds" all="68" unit="%" />
+      </time>
+      <time day="2015-05-11">
+         <symbol number="500" name="light rain" var="10d" />
+         <precipitation value="2.99" type="rain" />
+         <windDirection deg="190" code="S" name="South" />
+         <windSpeed mps="8.05" name="Fresh Breeze" />
+         <temperature day="25.57" min="19.63" max="25.57" night="19.63" eve="21.37" morn="20.92" />
+         <pressure unit="hPa" value="992.36" />
+         <humidity value="0" unit="%" />
+         <clouds value="scattered clouds" all="30" unit="%" />
+      </time>
+      <time day="2015-05-12">
+         <symbol number="500" name="light rain" var="10d" />
+         <precipitation value="0.37" type="rain" />
+         <windDirection deg="279" code="W" name="West" />
+         <windSpeed mps="10.37" name="Fresh Breeze" />
+         <temperature day="11.73" min="4.15" max="14.47" night="4.15" eve="6.82" morn="14.47" />
+         <pressure unit="hPa" value="996.13" />
+         <humidity value="0" unit="%" />
+         <clouds value="broken clouds" all="63" unit="%" />
+      </time>
+      <time day="2015-05-13">
+         <symbol number="800" name="sky is clear" var="01d" />
+         <precipitation />
+         <windDirection deg="348" code="NNW" name="North-northwest" />
+         <windSpeed mps="7" name="Moderate breeze" />
+         <temperature day="10.12" min="2.97" max="10.12" night="2.97" eve="9.96" morn="3.63" />
+         <pressure unit="hPa" value="1011.92" />
+         <humidity value="0" unit="%" />
+         <clouds value="clear sky" all="0" unit="%" />
+      </time>
+      <time day="2015-05-14">
+         <symbol number="800" name="sky is clear" var="01d" />
+         <precipitation />
+         <windDirection deg="44" code="NE" name="NorthEast" />
+         <windSpeed mps="2.38" name="Light breeze" />
+         <temperature day="13.43" min="3.34" max="13.43" night="3.34" eve="12.42" morn="5.32" />
+         <pressure unit="hPa" value="1016.72" />
+         <humidity value="0" unit="%" />
+         <clouds value="clear sky" all="4" unit="%" />
+      </time>
+      <time day="2015-05-15">
+         <symbol number="800" name="sky is clear" var="01d" />
+         <precipitation />
+         <windDirection deg="143" code="SE" name="SouthEast" />
+         <windSpeed mps="3.86" name="Gentle Breeze" />
+         <temperature day="16.87" min="7.35" max="16.87" night="7.35" eve="15.29" morn="7.46" />
+         <pressure unit="hPa" value="1014.98" />
+         <humidity value="0" unit="%" />
+         <clouds value="clear sky" all="0" unit="%" />
+      </time>
+   </forecast>
+</weatherdata>

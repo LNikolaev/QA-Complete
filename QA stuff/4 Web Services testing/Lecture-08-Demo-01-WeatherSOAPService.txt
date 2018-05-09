@@ -1,0 +1,19 @@
+1. Create new SOAP Project form templates
+
+It will create project for this service:
+http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
+
+2. Jmeter 3.0.0 depricates testing of SOAP/XML-RPC Request Step
+
+Most likely you don't need it because it is not exactly SOAP.
+Suggested way to test SOAP Services is with HTTP Request steps.
+
+If you want to test soap you add HTTP Requests and manually enter the content.
+You can use WSDL Browser or SOAP UI + Fiddler to se what is the actual request
+and then try to recreate it in Jmeter.
+
+It is really painful:)
+
+More info for XML-RPC vs. SOAP:
+http://www.slideshare.net/prady00/webservices-overview-xml-rpc-soap-and-rest
+http://maxivak.com/rest-vs-xml-rpc-vs-soap/

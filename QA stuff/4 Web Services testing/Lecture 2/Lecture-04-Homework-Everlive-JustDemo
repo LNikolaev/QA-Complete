@@ -1,0 +1,52 @@
+{
+	"owner": "47250",
+	"lastUpdatedBy": "47250",
+	"lastRevision": 6215484,
+	"team": null,
+	"id": "22f39006-e098-3c91-6402-671310aa18c2",
+	"name": "TelerikPlatfom",
+	"description": "",
+	"remoteLink": null,
+	"order": [
+		"00c818af-1c42-26c7-1088-7edd00cf245d",
+		"c0268f7c-f574-324c-3067-d2ffc662cbf8"
+	],
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "00c818af-1c42-26c7-1088-7edd00cf245d",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Verify count > 3\nvar jsonData = JSON.parse(responseBody);\ntests[\"User count > 3\"] = jsonData.Count > 3;\n\n// Verify response time is less than 1000ms\ntests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462917093877,
+			"name": "GetUsers",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2"
+		},
+		{
+			"id": "c0268f7c-f574-324c-3067-d2ffc662cbf8",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+			"preRequestScript": "//Notes: For some reason it does not work with evnironment variables\nvar now = new Date().getTime();\npostman.setGlobalVariable('RANDOM_USER_NAME', \"WSTest_\" + now);\npostman.setGlobalVariable('RANDOM_EMAIL', \"WSTest_\" + now + \"@abv.bg\");",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\n\n\ntests[\"Contains CreatedAt\"] = responseBody.has(\"CreatedAt\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1462916789773,
+			"name": "Create User",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"rawModeData": "{\r\n    \"Username\":\"{{RANDOM_USER_NAME}}\",\r\n    \"Password\": \"WSTest\",\r\n    \"DisplayName\": \"WS Test\",\r\n    \"Email\": \"{{RANDOM_EMAIL}}\"\r\n}"
+		}
+	]
+}

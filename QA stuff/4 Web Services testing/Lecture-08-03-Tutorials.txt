@@ -1,0 +1,7 @@
+Rest Tutorial:
+https://www.youtube.com/watch?v=YHfp6xXqe0Q (web site load testing)
+https://www.youtube.com/watch?v=zYAiBwJK1v8 (record HTTP trafic from browser)
+http://www.testautomationguru.com/how-to-test-rest-api-using-jmeter/
+
+Jmeter plugins:
+http://jmeter-plugins.org/wiki/Start/

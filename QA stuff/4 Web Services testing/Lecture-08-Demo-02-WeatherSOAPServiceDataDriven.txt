@@ -1,0 +1,9 @@
+Same as Lecture-08-Demo-01-WeatherSOAPService, just add Data driven requests
+
+See Day8\Jmeter\Weather - SOAP - CSV\XML-RPC Request.jmx
+See Day8\Jmeter\Calc\Calc.jmx
+
+If you want to read random rows from CSV you have 2 options:
+1. Randomize CSV with Excel
+2. Use this solution:
+http://stackoverflow.com/questions/10192319/how-can-i-read-the-next-row-from-a-csv-data-set-config-in-jmeter/10196360#1019636

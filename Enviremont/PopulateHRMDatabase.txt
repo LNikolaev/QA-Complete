@@ -1,0 +1,288 @@
+
+-- insert sample data in the DEPARTMENTS table
+insert into Departments(Name) values('Software Development');
+insert into Departments(Name) values ('Business Development');
+insert into Departments(Name) values ('Human Resources');
+insert into Departments(Name) values ('Administration');
+insert into Departments(Name) values ('Accounting');
+insert into Departments(Name) values ('Management');
+insert into Departments(Name, ParentId) values ('Software Engineering', 1);
+insert into Departments(Name, ParentId) values ('Quality Assurance', 1);
+insert into Departments(Name, ParentId) values ('Public Relations', 2);
+insert into Departments(Name, ParentId) values ('Marketing', 2);
+
+-- insert sample data in the TITLES table
+insert into Titles(Alias, Name) values ('CEO', 'Senior Executive Officer');
+insert into Titles(Alias, Name) values ('CTO', 'Senior Technology Officer');
+insert into Titles(Alias, Name) values ('M', 'Manager');
+insert into Titles(Alias, Name) values ('BO', 'Business Officer');
+insert into Titles(Alias, Name) values ('MA', 'Marketing Agent');
+insert into Titles(Alias, Name) values ('PR', 'Public Relations Officer');
+insert into Titles(Alias, Name) values ('A', 'Accountant');
+insert into Titles(Alias, Name) values ('S', 'Secretary');
+insert into Titles(Alias, Name) values ('SHR', 'Senior Recruiter');
+insert into Titles(Alias, Name, ParentId) values ('HR', 'Recruiter', 9);
+insert into Titles(Alias, Name) values ('SSE', 'Senior Software Engineer');
+insert into Titles(Alias, Name, ParentId) values ('SE', 'Software Engineer', 11);
+insert into Titles(Alias, Name, ParentId) values ('JSE', 'Junior Software Engineer', 12);
+insert into Titles(Alias, Name) values ('SQA', 'Senior Quality Assurance Engineer');
+insert into Titles(Alias, Name, ParentId) values ('QA', 'Quality Assurance Engineer', 14);
+insert into Titles(Alias, Name, ParentId) values ('JQA', 'Junior Quality Assurance Engineer', 15);
+
+-- insert sample data in the EMPLOYEES table
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate) 
+values ('Ronald Smith', 1, 6, 'rsmith@company.com', '359888111111', '10000', '2008-03-01');
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate ) 
+values ('Mladen Petrov', 2, 6, 'mpetrov@company.com', '359888222222', '10000', '2008-03-01');
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Ivan Ivanov', 3, 6, 'iivanov@company.com', '359887121314', '5000', '2008-10-01', 1);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Todor Dimitrov', 3, 6, 'tdimitrov@company.com', '359887141516', '5000', '2009-05-12', 2);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Stefan Petrov', 3, 6, 'spetrov@company.com', '359888777777', '6000', '2011-08-19',2);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ManagerId) 
+values ('Jon Adams', 3, 6, 'jadams@company.com', '359889414145', '5000', '2010-08-11', '2011-06-15',2);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ManagerId)
+values ('Maria Petrova', 7, 5, 'mpetrova@company.com', '359879873236', '1000', '2012-04-22', '2012-11-01',1);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ManagerId)
+values ('Tom Blank', 11, 7, 'tblank@company.com', '359879556677', '3000', '2008-04-20', '2011-02-20',4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ManagerId)
+values ('Dimo Ivanov', 12, 7, 'diliev@company.com', '359879776544', '2500', '2008-05-10', '2012-11-01',4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ReferrerId, ManagerId)
+values ('Teodor Jivkov', 12, 7, 'tjivkov@company.com', '359879125563', '2000', '2009-11-10', '2010-05-20', 4,4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, EndDate, ReferrerId, ManagerId) 
+values ('Iliana Dimitrova', 15, 8, 'idimitrova@company.com', '359879873111', '2000', '2010-04-01', '2012-07-01',4, 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Veneta Petkova', 15, 8, 'vpetkova@company.com', '359879873222', '2000', '2010-05-01', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Vili Nikolova', 15, 8, 'vnikolova@company.com', '359879873333', '2000', '2010-07-01', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Boris Penchev', 4, 2, 'bpenchev@company.com', '359879173211', '1500', '2009-05-04', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Ani Yordanova', 4, 2, 'ayordanova@company.com', '359879173441', '1200', '2010-06-04', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Didi Marinova', 5, 10, 'dmarinova@company.com', '359879353411', '1000', '2008-12-02', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Petia Todorova', 5, 10, 'ptodorova@company.com', '359879312311', '1200', '2009-10-02', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ReferrerId, ManagerId) 
+values ('Martin Petkov', 5, 10, 'mmetkov@company.com', '359871212411', '1000', '2010-10-10', 17 , 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Silvia Stefanova', 6, 9, 'stefanova@company.com', '359871211111', '800', '2010-09-12', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Eva Mincheva', 6, 9, 'emincheva@company.com', '359871211412', '900', '2012-01-14', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Todor Tonchev', 7, 5, 'ttonchev@company.com', '359871211499', '1200', '2008-04-01', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Ivelina Borianov', 7, 5, 'iborianova@company.com', '359871299112', '1200', '2010-06-01', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Cveti Vulchanova', 8, 4, 'cvulchanova@company.com', '359871883311', '600', '2008-05-01', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Dora Tencheva', 8, 4, 'dtencheva@company.com', '359871885566', '600', '2009-11-25', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Margarita Hristova', 9, 3, 'mhristova@company.com', '359871881414', '900', '2008-04-20', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ReferrerId, ManagerId) 
+values ('Tatiana Ivova', 10, 3, 'tivova@company.com', '359878885566', '700', '2010-12-05', 25, 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Kristina Dobreva', 10, 3, 'kdobreva@company.com', '359871885555', '700', '2012-10-07', 3);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Krasimir Dinev', 11, 7, 'kdinev@company.com', '359871995555', '4000', '2008-12-10', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Daniel Ignatov', 11, 7, 'dignatov@company.com', '359871884441', '3200', '2010-04-14', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Irina Stavrova', 11, 7, 'istavrova@company.com', '359879985559', '3300', '2010-05-20', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Petar Manev', 11, 7, 'pmanev@company.com', '359877785255', '3500', '2011-01-21', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Dimitar Ivov', 12, 7, 'divov@company.com', '359877784411', '2500', '2008-05-20', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Stefan Raichev', 12, 7, 'sraichev@company.com', '359871285601', '3000', '2012-02-10', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Stefan Tonov', 12, 7, 'stonov@company.com', '359877095255', '2400', '2011-04-20', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Yana Kalcheva', 12, 7, 'ykalcheva@company.com', '359890785255', '2500', '2011-07-15', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Asen Gradinarov', 12, 7, 'agradinarov@company.com', '359871005255', '3000', '2012-04-01', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Stela Ribraska', 12, 7, 'sribraska@company.com', '359876685255', '2700', '2013-11-15', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Stafan Vulchev', 12, 7, 'svulchev@company.com', '359877888244', '2600', '2012-06-01', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Petio Ilchev', 13, 7, 'pilchev@company.com', '359877445511', '900', '2012-04-13', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Katio Jeleva', 13, 7, 'kjeleva@company.com', '359877555511', '1100', '2012-12-20', 4);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Nikolay Marinov', 13, 7, 'nmarinov@company.com', '359877171717', '1200', '2013-07-17', 4);
+
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Lilia Beneva', 14, 8, 'lbeneva@company.com', '359872233717', '2300', '2008-05-01', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Fani Jekova', 14, 8, 'fjekova@company.com', '359873344717', '2200', '2010-06-02', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Hristina Hristova', 15, 8, 'hhristova@company.com', '359877099203', '1700', '2012-02-10', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Bogomil Borisov', 15, 8, 'bborisov@company.com', '359877090917', '1500', '2012-01-20', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Desi Naneva', 15, 8, 'dnaneva@company.com', '359877383817', '1700', '2013-07-17', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Radina Cvetanova', 16, 8, 'rcvetanova@company.com', '359877179191', '800', '2013-10-01', 5);
+insert into Employees (Name, TitleId , DepartmentId, Email, Phone, Salary, HireDate, ManagerId) 
+values ('Nikolay Denislavov', 16, 8, 'ndenislavov@company.com', '359870175555', '800', '2013-05-01', 5);
+
+-- insert sample data in the JOB_POSITIONS table
+insert into Job_Positions (TitleId, Description) values (10, 'Looking for a motivated recruiter with at least 2 years of experience.');
+insert into Job_Positions (TitleId, Description) values (11, 'Looking for an experienced software engineer with at least 5 years of experience in Java development.');
+insert into Job_Positions (TitleId, Description) values (12, 'Looking for a software engineer with experience in PL/SQL programming.');
+insert into Job_Positions (TitleId, Description) values (15, 'Looking for an experienced quality assurance engineer with at least 4 years of experience.');
+insert into Job_Positions (TitleId, Description) values (16, 'Looking for a junior quality assurance engineer motivated to work on challenging projects.');
+
+-- insert sample data in the JOB_CANDIDATES table
+insert into Job_Candidates (Name, Phone, Email, JobPositionId, ReferrerId)
+values ('Nina Cvetanova', '359877166773', 'ncvetanova@sample.com', 1, 18);
+insert into Job_Candidates (Name, Phone, Email, JobPositionId, ReferrerId)
+values ('Kalin Ganchev', '359877177779', 'kganchev@sample.com', 2, 20);
+insert into Job_Candidates (Name, Phone, Email, JobPositionId)
+values ('Jivko Enev', '359877173333', 'zenev@sample.com', 2);
+insert into Job_Candidates (Name, Phone, Email, JobPositionId)
+values ('Mira Slavova', '359877172212', 'mslavova@sample.com', 5);
+insert into Job_Candidates (Name, Phone, Email, JobPositionId)
+values ('Hristo Minkov', '359877993393', 'hminkov@sample.com', 5);
+
+-- insert sample data in the INTERVIEWS table
+insert into Interviews (InterviewerId, CandidateId,DateInterviewed, Score, Notes)
+values (26, 1, '2013-10-10', 7, 'Good communication skills.');
+insert into Interviews (InterviewerId, CandidateId,DateInterviewed, Score, Notes)
+values (31, 2, '2013-11-01', 4, 'Lack of knowledge in several important skills outlined in CV.');
+insert into Interviews (InterviewerId, CandidateId, DateInterviewed, Score, Notes)
+values (32, 4, '2013-11-11', 9, 'Good analytical thinking.');
+insert into Interviews (InterviewerId, CandidateId, DateInterviewed, Score, Notes)
+values (33, 4, '2013-12-01', 8, 'Good problem solving skills.');
+
+-- insert sample data in the VACATIONS table
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (5, 'APPROVED', '2008-06-01', '2008-07-06', '2009-07-21');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (6, 'APPROVED', '2008-07-02', '2008-07-09', '2009-07-19');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (6, 'DECLINED', '2008-08-05', '2008-08-14', '2009-08-20');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (7, 'APPROVED', '2009-05-14', '2008-06-01', '2009-06-15');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (7, 'APPROVED', '2009-09-01', '2009-09-09', '2009-09-16');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (7, 'APPROVED', '2009-11-05', '2009-11-10', '2009-11-20');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (9, 'APPROVED', '2010-03-01', '2010-03-20', '2010-04-01');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (11, 'DECLINED', '2011-02-01', '2011-02-20', '2011-02-27');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (14, 'DECLINED', '2012-07-01', '2012-07-15', '2012-07-22');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (15, 'DECLINED', '2012-08-01', '2012-08-15', '2012-08-22');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (15, 'APPROVED', '2013-05-02', '2013-06-01', '2013-06-15');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (22, 'APPROVED', '2013-06-01', '2013-07-10', '2013-07-20');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (16, 'PENDING', '2014-01-03', '2014-01-15', '2014-01-22');
+insert into vacations(EmployeeId, Status, RequestDate, FromDate, ToDate) 
+values (17, 'PENDING', '2014-01-06', '2014-02-01', '2014-02-14');
+
+-- insert sample data in the SKILLS table
+insert into skills(Name) values ('Java programming');
+insert into skills(Name) values ('C# programming');
+insert into skills(Name) values ('C/C++ programming');
+insert into skills(Name) values ('SQL programming');
+insert into skills(Name) values ('PL/SQL programming');
+insert into skills(Name) values ('Oracle administration');
+insert into skills(Name) values ('UML');
+insert into skills(Name) values ('Selenium');
+insert into skills(Name) values ('JUnit');
+insert into skills(Name) values ('Enterprise Java programming');
+insert into skills(Name) values ('JDBC');
+insert into skills(Name) values ('Hibernate');
+
+-- insert sample data in the EMPLOYEE_SKILLS table
+insert into Employee_Skills(EmployeeId, SkillId) values (11, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (11, 10);
+insert into Employee_Skills(EmployeeId, SkillId) values (11, 12);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 2);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 9);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 10);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 11);
+insert into Employee_Skills(EmployeeId, SkillId) values (28, 12);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 4);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 5);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 10);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 11);
+insert into Employee_Skills(EmployeeId, SkillId) values (29, 12);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 2);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 3);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 4);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 5);
+insert into Employee_Skills(EmployeeId, SkillId) values (30, 11);
+insert into Employee_Skills(EmployeeId, SkillId) values (31, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (31, 10);
+insert into Employee_Skills(EmployeeId, SkillId) values (9, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (9, 2);
+insert into Employee_Skills(EmployeeId, SkillId) values (10, 4);
+insert into Employee_Skills(EmployeeId, SkillId) values (10, 5);
+insert into Employee_Skills(EmployeeId, SkillId) values (32, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (32, 7);
+insert into Employee_Skills(EmployeeId, SkillId) values (32, 8);
+insert into Employee_Skills(EmployeeId, SkillId) values (32, 9);
+insert into Employee_Skills(EmployeeId, SkillId) values (33, 4);
+insert into Employee_Skills(EmployeeId, SkillId) values (33, 5);
+insert into Employee_Skills(EmployeeId, SkillId) values (33, 6);
+insert into Employee_Skills(EmployeeId, SkillId) values (34, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (34, 8);
+insert into Employee_Skills(EmployeeId, SkillId) values (34, 9);
+insert into Employee_Skills(EmployeeId, SkillId) values (35, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (35, 10);
+insert into Employee_Skills(EmployeeId, SkillId) values (36, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (36, 11);
+insert into Employee_Skills(EmployeeId, SkillId) values (37, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (37, 12);
+insert into Employee_Skills(EmployeeId, SkillId) values (38, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (38, 12);
+insert into Employee_Skills(EmployeeId, SkillId) values (39, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (40, 1);
+insert into Employee_Skills(EmployeeId, SkillId) values (41, 1);
+
+-- insert sample data in the VENDORS table
+insert into Vendors (Name) values ('Oracle');
+insert into Vendors (Name) values ('Microsoft');
+insert into Vendors (Name) values ('IBM');
+
+
+-- insert sample data in the CERTIFICATES table
+insert into Certificates (Name, VendorId) values ('Oracle Certified Java Programmer for Java version 6', 1);
+insert into Certificates (Name, VendorId) values ('Oracle Certified Java Programmer for Java version 7', 1);
+insert into Certificates (Name, VendorId) values ('Oracle Certified Database Associate for Oracle Database 11g', 1);
+insert into Certificates (Name, VendorId) values ('Oracle Certified Database Associate for Oracle Database 12c', 1);
+insert into Certificates (Name, VendorId) values ('Oracle Certified Database Administrator for Oracle Database 11g', 1);
+insert into Certificates (Name, VendorId) values ('Oracle Certified Database Administrator for Oracle Database 12c', 1);
+insert into Certificates (Name, VendorId) values ('Microsoft SQL Server 2008 Certified Database Administrator', 2);
+insert into Certificates (Name, VendorId) values ('Microsoft SQL Server 2008 Certified T-SQL Developer', 2);
+insert into Certificates (Name, VendorId) values ('IBM Certified DB2 Administrator', 3);
+
+-- insert sample data in the EMPLOYEE_CERTIFICATES table
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (28, 1, 44312, '2011-03-01');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (28, 3, 114312, '2011-05-01');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (29, 2, 44152, '2012-04-20');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (30, 2, 44158, '2012-05-20');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (30, 3, 111521, '2012-11-03');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (31, 7, 6521, '2008-11-01');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (31, 8, 14521, '2008-12-01');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (31, 9, 15521, '2009-02-01');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (34, 4, 66521, '2009-07-02');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (34, 5, 77521, '2010-03-15');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (37, 6, 45521, '2011-04-04');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (37, 7, 77521, '2011-05-05');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (38, 4, 67521, '2012-06-07');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (38, 6, 88521, '2013-08-10');
+insert into Employee_Certificates (EmployeeId, CertificateId, IssueId, IssueDate) values (38, 7, 99521, '2013-11-15');
+
+commit;

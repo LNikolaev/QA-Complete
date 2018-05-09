@@ -1,0 +1,25 @@
+{
+	"id": "36549d73-a091-76fe-fa67-4ac10d4e4acc",
+	"name": "LIVE",
+	"values": [
+		{
+			"key": "APP_ID",
+			"value": "cicqxw4v1lskdcya",
+			"type": "text",
+			"enabled": true,
+			"hovered": false
+		},
+		{
+			"key": "API_KEY",
+			"value": "obYeX5Z2hEsEuaV4l8u0Ben56X7NkbVl",
+			"type": "text",
+			"enabled": true,
+			"hovered": false
+		}
+	],
+	"timestamp": 1463171890356,
+	"synced": false,
+	"syncedFilename": "",
+	"team": null,
+	"isDeleted": false
+}

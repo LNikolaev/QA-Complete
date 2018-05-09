@@ -1,0 +1,993 @@
+{
+	"id": "22f39006-e098-3c91-6402-671310aa18c2",
+	"name": "TelerikPlatfom",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "a08c42bd-1f0c-531b-b15a-7e7f5c8e940a",
+			"name": "EndToEndTest",
+			"description": "",
+			"order": [
+				"00c818af-1c42-26c7-1088-7edd00cf245d",
+				"c0268f7c-f574-324c-3067-d2ffc662cbf8",
+				"fa067040-3b51-da10-d056-24eaf0a79525",
+				"4034cd77-5126-0e7f-564a-acb395a06a57",
+				"ff37ca04-307d-1ce5-56b4-89575ff11111",
+				"6c576596-fdbe-d62d-73ca-0582da989e54",
+				"548e4333-1a6b-14c1-666f-590a85e55071",
+				"06d5162b-1ab9-ab68-70ce-2886e42467f0",
+				"d4709b4b-69b4-8b9f-95d9-f7fba85a7f75"
+			],
+			"owner": "47250",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2"
+		}
+	],
+	"timestamp": 0,
+	"owner": "47250",
+	"remoteLink": "https://www.getpostman.com/collections/da7f69fac69caa22dc63",
+	"public": false,
+	"requests": [
+		{
+			"id": "00c818af-1c42-26c7-1088-7edd00cf245d",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Store user count in variable\nvar count = JSON.parse(responseBody).Count;\npostman.setGlobalVariable(\"initial_user_count\", count);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463173591493,
+			"name": "Get all users",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 649,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:09:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "b1ec8f49-be3f-afb3-f4c9-8df9f24115ce",
+					"name": "Sample Response",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "8c242c7d-dc6c-fcc2-097b-565174080bcb",
+					"name": "sam",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": ""
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "8ac7fa0c-93db-56e8-6378-51c09266dbae",
+					"name": "test",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "06d5162b-1ab9-ab68-70ce-2886e42467f0",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users/{{user_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "// Verify status code\ntests[\"Status code is 404\"] = responseCode.code === 404;\n\n// Verify result\ntests[\"Error code is 801\"] = JSON.parse(responseBody).errorCode === 801;\ntests[\"Error message is correct\"] = JSON.parse(responseBody).message === \"Item not found.\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463429513768,
+			"name": "Get user details after deleted",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": []
+		},
+		{
+			"id": "4034cd77-5126-0e7f-564a-acb395a06a57",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users/{{user_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Verify user data is correct \nvar jsonData = JSON.parse(responseBody);\ntests[\"Username is correct\"] = jsonData.Result.Username === globals[\"RANDOM_USER_NAME\"];\ntests[\"DisplayName is correct\"] = jsonData.Result.DisplayName === \"WS Test\";\ntests[\"Email is correct\"] = jsonData.Result.Email === globals[\"RANDOM_EMAIL\"];\ntests[\"Id is correct\"] = jsonData.Result.Id === globals[\"user_id\"];",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463313677155,
+			"name": "Get user details",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": []
+		},
+		{
+			"id": "548e4333-1a6b-14c1-666f-590a85e55071",
+			"headers": "Authorization: Masterkey {{API_KEY}}\nContent-Type: application/json\n",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users/{{user_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Verify result\ntests[\"Result code is 1\"] = JSON.parse(responseBody).Result === 1;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463430627923,
+			"name": "Delete user",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": []
+		},
+		{
+			"id": "6c576596-fdbe-d62d-73ca-0582da989e54",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users/{{user_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Verify user data is correct \nvar jsonData = JSON.parse(responseBody);\ntests[\"Username is correct\"] = jsonData.Result.Username === globals[\"RANDOM_USER_NAME\"];\ntests[\"DisplayName is correct\"] = jsonData.Result.DisplayName === \"WS Test Updated\";\ntests[\"Email is correct\"] = jsonData.Result.Email === globals[\"RANDOM_EMAIL\"];\ntests[\"Id is correct\"] = jsonData.Result.Id === globals[\"user_id\"];",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463429071356,
+			"name": "Get user details after update",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": []
+		},
+		{
+			"id": "c0268f7c-f574-324c-3067-d2ffc662cbf8",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users",
+			"preRequestScript": "// Generate random user name and password\nvar now = new Date().getTime();\npostman.setGlobalVariable('RANDOM_USER_NAME', \"WSTest_\" + now);\npostman.setGlobalVariable('RANDOM_EMAIL', \"WSTest_\" + now + \"@abv.bg\");",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "// Verify status code\ntests[\"Status code is 201\"] = responseCode.code === 201;\n\n// Get user id\nvar jsonData = JSON.parse(responseBody);\nvar userId = jsonData.Result.Id;\n\n// Save userId in variable\npostman.setGlobalVariable(\"user_id\", userId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463172029213,
+			"name": "Create new user",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"folder": "a08c42bd-1f0c-531b-b15a-7e7f5c8e940a",
+			"rawModeData": "{\r\n    \"Username\":\"{{RANDOM_USER_NAME}}\",\r\n    \"Password\": \"WSTest\",\r\n    \"DisplayName\": \"WS Test\",\r\n    \"Email\": \"{{RANDOM_EMAIL}}\"\r\n}"
+		},
+		{
+			"id": "d4709b4b-69b4-8b9f-95d9-f7fba85a7f75",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Get initial user count\nvar initialCount = globals[\"initial_user_count\"];\n\n// Get actual user count\nvar actualCount = JSON.parse(responseBody).Count;\n\n// Logging for debug purposes \nconsole.log(\"initialCount: \" + initialCount);\nconsole.log(\"actualCount: \" + actualCount);\n\n// Verify count increased by 1\ntests[\"Count decreaed by 1\"] = initialCount-0 === actualCount-0;\n\n// Notes: JavaScript is trange language!\n// tests[\"Count decreaed by 1\"] = initialCount === actualCount; will fail because it compare different objects\n// tests[\"Count decreaed by 1\"] = initialCount == actualCount; will pass\n// tests[\"Count decreaed by 1\"] = initialCount-0 === actualCount-0; will also pass",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463430573593,
+			"name": "Get all users after user is deleted",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 649,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:09:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "f3cb9938-9b56-ae9f-11e0-52f10d8501e4",
+					"name": "Sample Response",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "1bff5d2f-2dbe-4ae1-aa05-e1df50e322b5",
+					"name": "sam",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": ""
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "2ee937cf-dc3b-7a3d-3d8d-121c5940dce9",
+					"name": "test",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "fa067040-3b51-da10-d056-24eaf0a79525",
+			"headers": "",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Get initial user count\nvar initialCount = globals[\"initial_user_count\"];\n\n// Get actual user count\nvar actualCount = JSON.parse(responseBody).Count;\n\n// Logging for debug purposes \nconsole.log(\"initialCount: \" + initialCount);\nconsole.log(\"actualCount: \" + actualCount);\n\n// Notes:\n// JavaScript is strange :) \n// If value of initialCount is 2 and i run \"initialCount + 1\" it will return \"21\"\n// If I want to sum those numbers I should use \"+initialCount + 1\"\n// See:\n// http://stackoverflow.com/questions/8976627/how-to-add-two-strings-as-if-they-were-numbers\n\n// Verify count increased by 1\ntests[\"Count increaed by 1\"] = (+initialCount) + 1 === actualCount;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463430354535,
+			"name": "Get all users after new user is created",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 649,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:09:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "fc2ea056-9fa6-3ee1-71c3-7d45a5378dec",
+					"name": "Sample Response",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "d4518744-158f-8371-423f-ecf933e4b67e",
+					"name": "sam",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"time": 770,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Credentials",
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Encoding",
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Fri, 13 May 2016 20:11:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Vary",
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"description": ""
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Everlive",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"Count\":12,\"Result\":[{\"Username\":\"seth\",\"DisplayName\":\"Seth Peterson\",\"Email\":\"seth.peterson@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1982-12-02T22:00:00.000Z\",\"Picture\":\"64888a22-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b131-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"michael\",\"DisplayName\":\"Michael Taylor\",\"Email\":\"michael.taylor@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1963-12-02T22:00:00.000Z\",\"Picture\":\"64888a23-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b133-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"andy\",\"DisplayName\":\"Andy Gerald\",\"Email\":\"andy.gerald@telerik.com\",\"Gender\":\"1\",\"BirthDate\":\"1990-12-02T22:00:00.000Z\",\"Picture\":\"64888a24-049b-11e5-b4a0-8d82ac6bcf3f\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:08:38.361Z\",\"ModifiedAt\":\"2015-05-27T18:08:38.361Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Id\":\"6488b134-049b-11e5-b4a0-8d82ac6bcf3f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest\",\"DisplayName\":\"WS Test\",\"Email\":\"wstest@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2015-05-27T18:22:22.670Z\",\"ModifiedAt\":\"2015-05-27T18:22:22.670Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Id\":\"51663ee0-049d-11e5-93c5-3d4bef30a531\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"1462916591728\",\"DisplayName\":\"WS Test\",\"Email\":\"dtopuzov@gmail.com\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:43:11.841Z\",\"ModifiedAt\":\"2016-05-10T21:43:11.841Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"316e9510-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916778875\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916778875@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:46:18.684Z\",\"ModifiedAt\":\"2016-05-10T21:46:18.684Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Id\":\"a0cc8fc0-16f8-11e6-a6ee-93c3cbb50cb5\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1462916870458\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1462916870458@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-10T21:47:50.280Z\",\"ModifiedAt\":\"2016-05-10T21:47:50.280Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Id\":\"d7650080-16f8-11e6-8952-e13c7e900b58\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067298566\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067298566@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:34:56.512Z\",\"ModifiedAt\":\"2016-05-12T15:34:56.512Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Id\":\"146a7000-1857-11e6-80fa-4b02fdb467bd\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067393200\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067393200@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:36:31.237Z\",\"ModifiedAt\":\"2016-05-12T15:36:31.237Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Id\":\"4ce05350-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067452801\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067452801@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:37:30.768Z\",\"ModifiedAt\":\"2016-05-12T15:37:30.768Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Id\":\"705c0900-1857-11e6-a8b8-5993c98f081f\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463067658197\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463067658197@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T15:40:56.115Z\",\"ModifiedAt\":\"2016-05-12T15:40:56.115Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Id\":\"eac18030-1857-11e6-a600-bbf6492fa417\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}},{\"Username\":\"WSTest_1463078981204\",\"DisplayName\":\"WS Test\",\"Email\":\"WSTest_1463078981204@abv.bg\",\"IsVerified\":false,\"IdentityProvider\":\"Everlive\",\"Role\":\"64525ef0-049b-11e5-b4a0-8d82ac6bcf3f\",\"CreatedAt\":\"2016-05-12T18:49:39.182Z\",\"ModifiedAt\":\"2016-05-12T18:49:39.182Z\",\"CreatedBy\":\"00000000-0000-0000-0000-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0000-000000000000\",\"Owner\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Id\":\"47d468e0-1872-11e6-ad56-3dcccca3cf48\",\"Meta\":{\"Permissions\":{\"CanRead\":true,\"CanUpdate\":false,\"CanDelete\":false}}}]}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"state": {
+						"size": "normal"
+					},
+					"id": "7b2f4513-86fc-c839-bff7-cf48c5f0288d",
+					"name": "test",
+					"request": {
+						"url": "http://api.everlive.com/v1/ajEZpshHow57m8vT/Users",
+						"headers": [],
+						"data": [],
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "ff37ca04-307d-1ce5-56b4-89575ff11111",
+			"headers": "Content-Type: application/json\nAuthorization: Masterkey {{API_KEY}}\n",
+			"url": "http://api.everlive.com/v1/{{APP_ID}}/Users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "// Verify status code\ntests[\"Status code is 200\"] = responseCode.code === 200;\n\n// Verify result\ntests[\"Result code is 9\"] = JSON.parse(responseBody).Result === 9;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1463430619531,
+			"name": "Update created user",
+			"description": "",
+			"collectionId": "22f39006-e098-3c91-6402-671310aa18c2",
+			"responses": [],
+			"rawModeData": "{\r\n    \"DisplayName\": \"WS Test Updated\",\r\n    \"Email\": \"{{RANDOM_EMAIL}}\"\r\n}"
+		}
+	]
+}

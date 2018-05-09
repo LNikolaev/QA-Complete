@@ -1,0 +1,7 @@
+Status: OK
+Time Taken: 182
+Size: 0
+Timestamp: Tue Jun 07 19:48:55 EEST 2016
+TestStep: Get InitUserCount
+
+----------------- Messages ------------------------------

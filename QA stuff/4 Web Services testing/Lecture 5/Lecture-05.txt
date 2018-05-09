@@ -1,0 +1,24 @@
+1. Show Weather-soapui-project
+- Asserts demos
+- Properties demos
+- Loop demos
+- Script demos
+- Data Driven tests demos
+- Commandline execution (and GUI test runner)
+
+Commandline options:
+https://www.soapui.org/test-automation/running-from-command-line/functional-tests.html
+
+Example:
+rd results /Q /S
+mkdir results
+"C:\Program Files\SmartBear\SoapUI-5.2.1\bin\testrunner.bat" -r -a -j -J Weather-soapui-project.xml -f"result"
+
+2. Show country-soapui-project
+- Show CDATA
+
+99. Service mocking
+
+How to: 
+https://www.soapui.org/soap-mocking/getting-started.html
+https://www.soapui.org/soap-mocking/working-with-mockservices.html

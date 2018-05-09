@@ -1,0 +1,27 @@
+This is online calculator service:
+http://www.dneonline.com/calculator.asmx
+Write tests for it.
+
+Alternative Calculator:
+WSDL: http://soaptest.parasoft.com/calculator.wsdl
+Docs: http://soatest.parasoft.com/services/#Calculator
+
+
+CurrencyConvertor
+http://www.webservicex.com/CurrencyConvertor.asmx?wsdl
+Write tests for it.
+
+WeatherWS
+http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
+Notes: It works for US only. Can find zip codes here: http://www.mapsofworld.com/usa/zipcodes/
+Write tests for it.
+
+Service that gives weather forecast http://www.webservicex.net/globalweather.asmx?WSDL
+Create valid and invalid requests.
+Prepare tests and group them in a suite.
+
+Service that gives country details http://www.webservicex.net/country.asmx?WSDL 
+Create valid and invalid requests.
+Prepare tests and group them in a suite.
+Add appropriate assertions.
+Use at least two property transfers (e.g. take country’s currency and then use it in GetCountryByCurrency)

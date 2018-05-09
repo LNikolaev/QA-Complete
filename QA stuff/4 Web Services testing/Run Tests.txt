@@ -1,0 +1,4 @@
+Git Repo: https://github.com/dtopuzov/WebServiceTests
+
+SOAPUI:
+"C:\Program Files\SmartBear\SoapUI-5.2.1\bin\testrunner.bat" -r -a -j -J SoapUI\Weather-soapui-project.xml -f"result"

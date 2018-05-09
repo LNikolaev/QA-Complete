@@ -1,0 +1,16 @@
+Weather-soapui-project:
+
+Description: Tests for SOAP Weather service.
+WSDL: http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
+
+Tasks:
+1. Create Proejct
+2. Play woth requests
+3. Create TestSuites/TestCases/TestSteps
+4. Create Asserts
+- Contains Text
+- XPath
+- Scripted assert
+
+Notes:
+Get ZIP from here: http://www.unitedstateszipcodes.org/

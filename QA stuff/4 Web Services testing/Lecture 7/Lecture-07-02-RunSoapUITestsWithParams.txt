@@ -1,0 +1,20 @@
+You can overwrite Project params in SoapUI when executing with test runner.
+
+UI Test Runner:
+Right Click your TelerikAPI project -> Launch TestRunner -> Properties -> in Project properties type:
+
+AppID=80uc90wdkq8a5l34
+Host=api.everlive.com
+ApiKey=LxzZJJAgUFZAnZIeAhQ3OWR94edOrYV6
+
+Via commandline:
+
+"C:\Program Files\SmartBear\SoapUI-5.2.1\bin\testrunner.bat" 
+-r -a -j -J REST-Project-soapui-project.xml -fresult 
+-PAppID=80uc90wdkq8a5l34 
+-PHost=api.everlive.com 
+-PApiKey=LxzZJJAgUFZAnZIeAhQ3OWR94edOrYV6
+
+Note: Plase make it one line again if you want to run it
+
+"C:\Program Files\SmartBear\SoapUI-5.2.1\bin\testrunner.bat" -r -a -j -J REST-Project-soapui-project.xml -fresult -PAppID=80uc90wdkq8a5l34 -PHost=api.everlive.com -PApiKey=LxzZJJAgUFZAnZIeAhQ3OWR94edOrYV6

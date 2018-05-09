@@ -1,0 +1,25 @@
+-- 1. Print the names of the departments and the number of employees in each of them
+
+-- 2. Print the names of the departments with more than 2 employees
+
+-- 3. Print the total amount of salaries given to employees for each department
+
+-- 4. Print the number of employees that have at least one vacation request in 2012
+
+-- 5. Print the names of all employees that have a first name starting with the letter 'M' and last name starting with the letter 'P' 
+
+-- 6. Print the names of the employees that have a Microsoft certificate
+
+-- 7. Print the names of all job titles in the company along with the number of job positions currently opened.
+
+-- 8. Print the number of vacation requests older than two year from the current date
+
+-- 9. Print the number of vacations requested between 2008 and 2012
+
+-- 10. Print the number of vacations that have more than 10 days for 2012
+
+-- 11. Print the number of vacations per department per years requested between 2008 and 2012 along with the name of the department
+
+-- 12. Print all departments without employees
+
+-- 13. Print the names of the candidates that have an interview score which is higher than the average for the company

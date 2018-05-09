@@ -1,0 +1,1 @@
+java -jar c:\Jenkins\slave.jar -jnlpUrl http://192.168.56.1:8080/computer/Windows7x86/slave-agent.jnlp

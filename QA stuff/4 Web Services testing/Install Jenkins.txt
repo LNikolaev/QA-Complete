@@ -1,0 +1,39 @@
+1. Go to https://jenkins.io/
+2. Download latest (it is 2.9 now)
+  - If you get installer -> just run it and go to step 5
+  - If you get .war file go to step 3
+3. Move war file to location where Jenkins will be installed (e.g. c:\Tools\Jenkins)
+4. Open terminal in folder above and run "java -jar jenkins.war"
+5. Open http://localhost:8080/ in your browser
+6. You are promted to enter passwork, passworkd cnbe found in console log, it looks like this:
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+41de6a164de24692b40123bdfc9f4703
+
+This may also be found at: C:\Users\Mitaka_F1\.jenkins\secrets\initialAdminPassword
+
+7. Install plugins you need ("Install suggested plugins" should be OK)
+8. Create First Admin User -> Click "Countinue as admin" or create new user
+9. Click start using Jenkins
+10. Login with admin or user you created. For admin login use:
+User: admin
+Pass: 41de6a164de24692b40123bdfc9f4703 (or whatever was your admin Id)
+
+Reference: 
+https://jenkins.io/download/
+
+Notes: 
+If you use Jenkins on Windows, consiter installing as Windows service:
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+as+a+Windows+service
+
+Please run service as Administrator or user with Administrator rights
+
+Some usefull plugins:
+
+Git plugin Website
+This plugin allows use of Git as a build SCM
+
+Throttle Concurrent Builds Plug-in Website
+This plugin allows for throttling the number of concurrent builds of a project running per node or globally.

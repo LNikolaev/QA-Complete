@@ -1,0 +1,1 @@
+Napishete, vsichki vyzmojni lokatori, za koito se setite che sa adekvatni za izpolzvane... za vseki edin ot elementite v tozi arhiv.

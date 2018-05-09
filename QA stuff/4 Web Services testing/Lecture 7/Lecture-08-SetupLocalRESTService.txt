@@ -1,0 +1,20 @@
+URL: https://github.com/typicode/json-server
+Install: npm install -g json-server
+
+Usage: Read https://github.com/typicode/json-server
+
+Plase create db.json as described in URL above
+
+
+Get all posts: http://localhost:3000/posts
+Get post: http://localhost:3000/posts/1
+
+Create Post:
+
+POST http://localhost:3000/posts
+
+{
+   "id": 1,
+   "title": "json-server",
+   "author": "typicode"
+}

@@ -1,0 +1,66 @@
+Status: OK
+Time Taken: 183
+Size: 753
+Timestamp: Mon May 30 01:04:42 EEST 2016
+TestStep: GetWeather (TestCase properties)
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+Encoding: UTF-8
+Endpoint: http://wsf.cdyne.com/WeatherWS/Weather.asmx
+
+---------------- Request ---------------------------
+Request Headers: Host : wsf.cdyne.com
+Content-Length : 315
+Accept-Encoding : gzip,deflate
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Connection : Keep-Alive
+Content-Type : application/soap+xml;charset=UTF-8;action="http://ws.cdyne.com/WeatherWS/GetCityWeatherByZIP"
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:weat="http://ws.cdyne.com/WeatherWS/">
+   <soap:Header/>
+   <soap:Body>
+      <weat:GetCityWeatherByZIP>
+         <!--Optional:-->
+         <weat:ZIP>10007</weat:ZIP>
+      </weat:GetCityWeatherByZIP>
+   </soap:Body>
+</soap:Envelope>
+
+---------------- Response --------------------------
+Response Headers: X-AspNet-Version : 2.0.50727
+Date : Sun, 29 May 2016 22:04:36 GMT
+#status# : HTTP/1.1 200 OK
+Content-Length : 753
+Expires : -1
+Content-Type : application/soap+xml; charset=utf-8
+X-Powered-By : ASP.NET
+Server : Microsoft-IIS/7.5
+Pragma : no-cache
+Cache-Control : no-cache
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetCityWeatherByZIPResponse xmlns="http://ws.cdyne.com/WeatherWS/">
+         <GetCityWeatherByZIPResult>
+            <Success>true</Success>
+            <ResponseText>City Found</ResponseText>
+            <State>NY</State>
+            <City>New York</City>
+            <WeatherStationCity>White Plains</WeatherStationCity>
+            <WeatherID>15</WeatherID>
+            <Description>N/A</Description>
+            <Temperature>63</Temperature>
+            <RelativeHumidity>87</RelativeHumidity>
+            <Wind>E7</Wind>
+            <Pressure>29.97S</Pressure>
+            <Visibility/>
+            <WindChill/>
+            <Remarks/>
+         </GetCityWeatherByZIPResult>
+      </GetCityWeatherByZIPResponse>
+   </soap:Body>
+</soap:Envelope>

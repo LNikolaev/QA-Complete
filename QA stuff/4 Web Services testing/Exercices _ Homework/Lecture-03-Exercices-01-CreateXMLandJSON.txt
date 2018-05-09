@@ -1,0 +1,12 @@
+Define XML and JSON objects with data for several cars
+
+Car object should contain following info
+- Make
+- Model
+- Year
+- Engine
+
+Engine object should contain following info
+- FuelType
+- Cylinders
+- Displacement

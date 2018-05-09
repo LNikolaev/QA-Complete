@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<definitions name="PriceCheck"
+   targetNamespace="http://www.skatestown.com/services/PriceCheck"
+   xmlns:pc="http://www.skatestown.com/services/PriceCheck"
+   xmlns:avail="http://www.skatestown.com/ns/availability"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+   <!-- Type definitions -->
+   <types>
+      <xsd:schema targetNamespace="http://www.skatestown.com/ns/availability"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+         <xsd:complexType name="availabilityType">
+            <xsd:sequence>
+               <xsd:element name="sku" type="xsd:string"/>
+               <xsd:element name="price" type="xsd:double"/>
+               <xsd:element name="quantityAvailable" type="xsd:integer"/>
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:schema>
+   </types>
+
+   <!-- Message definitions -->
+   <!-- A PriceCheckRequest is simply an item code (sku)  -->
+   <message name="PriceCheckRequest">
+      <part name="sku" type="xsd:string"/>
+   </message>
+
+   <!-- A PriceCheckResponse consists of an availability structure,   -->
+   <!-- defined above.                                               -->
+   <message name="PriceCheckResponse">
+      <part name="result" type="avail:availabilityType"/>
+   </message>
+
+   <!-- Port type definitions -->
+   <portType name="PriceCheckPortType">
+      <operation name="checkPrice">
+         <input message="pc:PriceCheckRequest"/>
+         <output message="pc:PriceCheckResponse"/>
+      </operation>
+   </portType>
+
+   <!-- Binding definitions -->
+   <binding name="PriceCheckSOAPBinding" type="pc:PriceCheckPortType">
+      <soap:binding style="rpc"
+         transport="http://schemas.xmlsoap.org/soap/http"/>
+      <operation name="checkPrice">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="encoded"
+                       namespace=
+                           "http://www.skatestown.com/services/PriceCheck"
+                       encodingStyle=
+                           "http://schemas.xmlsoap.org/soap/encoding/"/>
+         </input>
+         <output>
+            <soap:body use="encoded"
+                       namespace=
+                           "http://www.skatestown.com/services/PriceCheck"
+                       encodingStyle=
+                          "http://schemas.xmlsoap.org/soap/encoding/"/>
+         </output>
+      </operation>
+   </binding>
+
+   <!-- Service definition -->
+   <service name="PriceCheckService">
+      <port name="PriceCheck" binding="pc:PriceCheckSOAPBinding">
+         <soap:address
+            location=
+               "http://localhost:8080/axis/services/PriceCheck"/>
+      </port>
+   </service>
+</definitions>

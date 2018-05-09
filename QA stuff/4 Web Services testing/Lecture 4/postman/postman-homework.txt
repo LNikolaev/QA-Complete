@@ -1,0 +1,23 @@
+We have two repos:
+https://github.com/NativeScript/android-runtime
+https://github.com/NativeScript/ios-runtime
+
+1. Verify closed issues > open issues 
+2. Verify ios-runtime has more open bugs than android-runtime
+3. Report new issue in this repo:
+https://github.com/dtopuzov/test
+
+API ref and samples: 
+https://developer.github.com/v3/
+
+All users:
+https://api.github.com/users
+
+All repositories in Telerik organization:
+https://api.github.com/orgs/telerik/repos
+
+All closed issues in NativeScript repo:
+https://api.github.com/repos/NativeScript/NativeScript/issues?state=closed
+
+All closed reported by me:
+https://api.github.com/repos/NativeScript/NativeScript/issues?state=closed&author=dtopuzov
