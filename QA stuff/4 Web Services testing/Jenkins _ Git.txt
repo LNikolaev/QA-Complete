@@ -1,1 +1,0 @@
-https://thepracticalsysadmin.com/setting-up-a-github-webhook-in-jenkins/

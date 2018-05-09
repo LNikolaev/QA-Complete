@@ -1,3 +1,0 @@
-Gatling hello-world video: https://www.youtube.com/watch?v=n8FBlTy035U
-Gatling blog: http://automationrhapsody.com/performance-testing-with-gatling/
-GAtling simulation setup: http://gatling.io/docs/2.1.1/general/simulation_setup.html

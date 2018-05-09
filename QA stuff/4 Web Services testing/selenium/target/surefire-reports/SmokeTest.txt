@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: SmokeTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.901 sec <<< FAILURE! - in SmokeTest
-verifyTemperatureInSofia(SmokeTest)  Time elapsed: 9.806 sec  <<< ERROR!
-java.lang.NumberFormatException: For input string: "13.1°Ñ"
-	at SmokeTest.verifyTemperatureInSofia(SmokeTest.java:33)
-

@@ -1,7 +1,0 @@
-1. Open http://wsdlbrowser.com/
-2. Load WSDL from http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
-3. Show functions and play requests
-
-Notes: 
-Get zip codes from http://www.mapsofworld.com/usa/zipcodes/
-For example: 32201

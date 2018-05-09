@@ -1,9 +1,0 @@
-Something important when select automation aproach:
-Have in mind cost of machines where tests will be executed.
-Low system requirements to run tests -> cheap infrastructure
-
-34 Common SoapUI Interview Questions and Answers:
-http://www.softwaretestinghelp.com/soapui-interview-questions-and-answers/
-
-15 SoapUI Tutorials:
-http://www.softwaretestinghelp.com/web-services-api-testing-tool-soapui-tutorial-1/

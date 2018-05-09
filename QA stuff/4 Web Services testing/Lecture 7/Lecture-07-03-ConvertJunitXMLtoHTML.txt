@@ -1,7 +1,0 @@
-https://www.npmjs.com/package/junit-viewer
-
-Install:
-npm install junit-viewer -g
-
-Usage:
-junit-viewer --results=file_or_folder_location --save=file_location.html
