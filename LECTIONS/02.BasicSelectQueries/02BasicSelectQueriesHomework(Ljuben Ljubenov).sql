@@ -41,7 +41,7 @@ FROM titles;
 -- 9. retrieve the IDs, 'from' and 'to' dates of all employees that have requested a vacation in 2013 - combine the result in a single column with name 'record' in the format 'id:from-to'
 SELECT CONCAT(vacations.EmployeeId, ':', vacations.FromDate, '-', vacations.ToDate) AS 'record'
 FROM vacations
-WHERE YEAR(RequestDate) LIKE '2013';
+WHERE YEAR(RequestDate) = '2013';
 
 -- 10. retrieve the names of all vendors whose name starts with 'M'
 SELECT vendors.Name

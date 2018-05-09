@@ -8,13 +8,20 @@ ORDER BY 2;
 SELECT employees.DepartmentId, COUNT(employees.ManagerId) AS Employees
 FROM employees
 GROUP BY employees.DepartmentId
-HAVING Employees > 2
+HAVING COUNT(employees.ManagerId) > 2
 ORDER BY 2;
 
 -- 3. Изведете бройката на служителите, които са ползвали отпуск през 2010-та (поне два начина)
 SELECT COUNT(*)
 FROM vacations
-WHERE status = 'APPROVED' AND YEAR(FromDate) IN (2010);
+WHERE status = 'APPROVED' AND YEAR(FromDate) = 2010;
+-- where requestdate>= '2010-01-01' and reqiestdate < '2011-01-01'
+
+SELECT COUNT(*)
+FROM vacations
+where ((year(FromDate) = 2010 or year(ToDate) = 2010)
+or (year(FromDate) < 2010 and year(ToDate) > 2010))
+and status = 'APPROVED';
 
 -- 4. Изведете всички позиции/тайтъли, които съдържат думата Junior
 SELECT job_positions.Description, titles.Name 
@@ -57,6 +64,14 @@ SELECT Name, case
 	END
 FROM employees
 ORDER BY 2 DESC;
+
+SELECT name, case
+when hiredate between adddate(now(), interval -3 year) and adddate(now(), interval -1 year) then '1-3'
+when hiredate between adddate(now(), interval -5 year) and adddate(now(), interval -3 year) then '3-5'
+when hiredate between adddate(now(), interval -10 year) and adddate(now(), interval -5 year) then '5-10'
+when hiredate < adddate(now(), interval - 10 year) then '10+'
+END AS EXPERIANCE
+FROM employees;
 
 -- 10. Изведете 2 колони - колона, в която да има стойности '1-3','3-5','5-10','10+' в зависимост от това даденият служител от колко години е във фирмата и колона, в която имаме брой служители попадащи в съответната категория.
 SELECT  case

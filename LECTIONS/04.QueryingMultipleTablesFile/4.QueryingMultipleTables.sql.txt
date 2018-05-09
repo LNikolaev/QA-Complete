@@ -1,36 +1,33 @@
+-- 0. retrieve all employees along with their department (Когато искаме всички --> LEFT
+SELECT e.Name as EmployeeName, d.Name as DepartmentName
+FROM employees as e
+LEFT JOIN departments as d ON e.DepartmentId = d.Id;
+
+-- 1. retrieve all employees along with their manager
+select e.Name as 'EmployeeName', m.Name as 'ManagerName'
+from employees e
+join employees m on e.ManagerId = m.Id;
+
+-- 2. retrieve all employees that have requested a vacation between 01.01.2011 and 01.01.2012
+select e.Name, v.RequestDate, v.Status
+FROM employees as e
+join vacations as v on e.Id = v.EmployeeId
+WHERE YEAR(v.RequestDate) = 2011;
+
+-- 3.1. Write an SQL query to find the average salary in the "Marketing" department.
+select avg(e.Salary)
+from departments d
+join employees e on d.Id = e.DepartmentId
+where d.Name = 'Marketing'
+;
+
+-- EXAMPLE
 select *
 from employees as e
 left join vacations as v 
-	on e.id = v.employeeid
-	and year(v.RequestDate) = '2008' 
-	and status = 'approved'
-where v.employeeid is null
-
--- 0. retrieve all employees along with their department
-select e.name as EmployeeName, d.name as DepartmentName, e.salary
-from employees as e
-left join departments as d 
-	on e.DepartmentId = d.id
-
--- 1. retrieve all employees along with their manager
-
-
--- 2. retrieve all employees that have requested a vacation between 01.01.2011 and 01.01.2012
-
-select e.name, v.requestdate, v.status
-from employees as e
-join vacations as v on e.id = v.employeeid
-where year(v.requestdate) = 2011
-
-
-
--- 3.1. Write an SQL query to find the average salary in the "Marketing" department.
-
-select avg(e.salary)
-from departments d
-join employees e on d.Id = e.DepartmentId
-where d.name = 'Marketing'
-
+		on e.Id = v.EmployeeId
+        AND year(v.RequestDate) = 2008
+where v.EmployeeId is null
 
 			
 -- 3.2. Write an SQL query to find the average salary in the department which name start with 'a'.			
