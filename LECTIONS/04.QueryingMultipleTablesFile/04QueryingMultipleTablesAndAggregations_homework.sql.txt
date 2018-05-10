@@ -40,6 +40,10 @@ join vendors v on v.Id = ec.CertificateId
 where v.Name = 'Microsoft';
 
 -- 7. Print the names of all job titles in the company along with the number of job positions currently opened.
+select t.Name, count(*) as JobPositions
+from titles t
+join job_positions jp on t.Id = jp.TitleId
+group by jp.TitleId;
 
 -- 8. Print the number of vacation requests older than two year from the current date
 select  count(distinct RequestDate)
@@ -56,9 +60,28 @@ SELECT COUNT(*) ,SUM(ToDate - FromDate)
 FROM vacations
 where RequestDate >= '2012-01-01' and RequestDate < '2013-01-01'
 having SUM(ToDate - FromDate) > 10;
--------------------------------------------------------------------------------
+
 -- 11. Print the number of vacations per department per years requested between 2008 and 2012 along with the name of the department
+select d.Name, count(*)
+from employees e
+join departments d on d.Id = e.DepartmentId
+join vacations v on v.EmployeeId = d.Id
+WHERE year(v.RequestDate)  >= '2008-01-01' AND v.RequestDate < '2013-01-01'
+GROUP BY d.Name
+ORDER BY 2;
 
 -- 12. Print all departments without employees
+select d.Name
+from departments d 
+left join employees e on e.DepartmentId = d.Id
+where e.DepartmentId is null;
 
 -- 13. Print the names of the candidates that have an interview score which is higher than the average for the company
+
+select e.Name, i.Score
+from interviews i
+join employees e on e.Id = i.CandidateId
+WHERE i.Score > (SELECT  avg(Score)
+					from interviews)
+order by 2
+;
