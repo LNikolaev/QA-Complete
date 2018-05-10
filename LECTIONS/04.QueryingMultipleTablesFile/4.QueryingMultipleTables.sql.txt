@@ -28,33 +28,70 @@ left join vacations as v
 		on e.Id = v.EmployeeId
         AND year(v.RequestDate) = 2008
 where v.EmployeeId is null
-
+;
 			
 -- 3.2. Write an SQL query to find the average salary in the department which name start with 'a'.			
-
-
+select d.Name, format(avg(e.Salary), 0)
+from departments d
+join employees e on e.DepartmentId = d.Id
+where d.Name like 'a%'
+;
 -- 4. Write an SQL query to find the first 10 employees joined the company (select EmployeeName and DepartmentName)
-
+select e.Name, e.HireDate, d.Name
+from employees e
+left join departments d on e.Id = e.DepartmentId
+where hiredate <= (select max(HireDate) from employees)
+group by e.Name
+order by 2 desc
+limit 10;
 
 -- 5. Write a SQL query to find the names of all employees from the departments "Quality Assurance" or "Marketing" whose hire year is between 2005 and 2009 (2 - subselect and join)
-
+select e.Name, d.Name
+from employees e
+join departments d on e.DepartmentId = d.Id
+where d.Name in ('Quality Assurance', 'Marketing') and year(HireDate) between 2005 and 2009
+;
 
 -- 6. Write an SQL query to find the employees that have more than two certificates
-
-
-
+select e.Name, c.Name, count(*) as NumberOfCertificates
+from employees e
+join employee_certificates es on e.Id = es.EmployeeId
+join certificates c on es.CertificateId = c.Id
+group by e.Name
+having count(*) > 2
+;
 -- 7. select all employee names along with number of their certificates
+select e.Name,  count(*) as NumberOfCertificates
+from employees e
+join employee_certificates es on e.Id = es.EmployeeId
+join certificates c on es.CertificateId = c.Id
+group by e.Name
 
 
 -- 8. select all departments without employees 
-
+select d.Name
+from departments d 
+left join employees e on e.DepartmentId = d.Id
+where e.DepartmentId is null;
 
 -- 9. select skills that are assigned to at least one employee with title 'Software Engineer'
-
+select s.Name, count(EmployeeId)
+from employees e
+join employee_skills es on e.Id = es.EmployeeId
+join skills s on es.SkillId = s.Id
+join titles t on e.TitleId = t.Id
+and t.Name like 'Software Engineer'
+group by s.Name
+having count(EmployeeId) > 1;
 
 
 -- 10. Write an SQL query to find for each department and for each job title the total number of employees. 
-
+select d.Name, t.Name, count(*) as Employees
+from employees e
+join departments d on e.DepartmentId = d.Id
+join titles t on e.TitleId = t.Id
+group by d.Name, t.Name
+;
 
 -- 11. Write an SQL query to find all managers that have exactly 3 employees. Display their names and the name and their department. 
 
@@ -65,9 +102,12 @@ where v.EmployeeId is null
 
 
 -- 13. select all employees that have more skills than certificates
-
-
-
+select e.Name, count(ec.CertificateId) as Certificates, count(es.SkillId) as Skills
+from employees e
+left join employee_certificates ec on ec.EmployeeId = e.Id
+left join employee_skills es on es.EmployeeId = e.Id
+group by e.Name
+having count(ec.CertificateId) <= count(es.SkillId);
 -- 14. select employees with a salary higher than that of 'Didi Marinova' (2 - subselect and join)
 
 
