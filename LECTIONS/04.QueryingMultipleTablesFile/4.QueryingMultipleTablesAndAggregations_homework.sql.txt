@@ -1,23 +1,62 @@
 -- 1. Print the names of the departments and the number of employees in each of them
+SELECT d.Name, COUNT(*)
+FROM departments d
+JOIN employees e ON d.Id = e.DepartmentId
+GROUP BY d.Name;
 
 -- 2. Print the names of the departments with more than 2 employees
+SELECT d.Name, COUNT(*) as 'Employees'
+FROM departments d
+JOIN employees e ON d.Id = e.DepartmentId
+GROUP BY d.Name
+HAVING COUNT(*) > 2
+ORDER BY 2
+;
 
 -- 3. Print the total amount of salaries given to employees for each department
+SELECT d.Name, SUM(e.Salary) as TotalAmount, COUNT(*) as 'Employees'
+FROM departments d
+JOIN employees e ON d.Id = e.DepartmentId
+GROUP BY d.Name
+ORDER BY 2
+;
 
 -- 4. Print the number of employees that have at least one vacation request in 2012
+select COUNT(DISTINCT e.Name) as 'Eemployees'
+FROM employees as e
+join vacations as v on e.Id = v.EmployeeId
+WHERE v.RequestDate >= '2012-01-01' AND v.RequestDate < '2013-01-01';
 
 -- 5. Print the names of all employees that have a first name starting with the letter 'M' and last name starting with the letter 'P' 
+select Name
+from employees
+where name like 'M% P%';
 
 -- 6. Print the names of the employees that have a Microsoft certificate
+select e.Name, v.Name
+from employees e
+join employee_certificates ec on ec.EmployeeId = e.Id
+join vendors v on v.Id = ec.CertificateId
+where v.Name = 'Microsoft';
 
 -- 7. Print the names of all job titles in the company along with the number of job positions currently opened.
 
 -- 8. Print the number of vacation requests older than two year from the current date
+select  count(distinct RequestDate)
+from vacations
+where RequestDate between adddate(current_date(), interval -2 year) and current_date();
 
 -- 9. Print the number of vacations requested between 2008 and 2012
+select  count(distinct RequestDate)
+from vacations
+where RequestDate >= '2008-01-01' and RequestDate < '2013-01-01';
 
 -- 10. Print the number of vacations that have more than 10 days for 2012
-
+SELECT COUNT(*) ,SUM(ToDate - FromDate)
+FROM vacations
+where RequestDate >= '2012-01-01' and RequestDate < '2013-01-01'
+having SUM(ToDate - FromDate) > 10;
+-------------------------------------------------------------------------------
 -- 11. Print the number of vacations per department per years requested between 2008 and 2012 along with the name of the department
 
 -- 12. Print all departments without employees
