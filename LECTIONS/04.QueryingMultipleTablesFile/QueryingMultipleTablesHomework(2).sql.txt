@@ -1,0 +1,36 @@
+-- 9. select skills that are assigned to at least one employee with title 'Software Engineer'
+select s.Name, count(EmployeeId)
+from employees e
+join employee_skills es on e.Id = es.EmployeeId
+join skills s on es.SkillId = s.Id
+join titles t on e.TitleId = t.Id
+and t.Name like 'Software Engineer'
+group by s.Name
+having count(EmployeeId) > 1;
+
+
+-- 10. Write an SQL query to find for each department and for each job title the total number of employees. 
+select d.Name, t.Name, count(*) as Employees
+from employees e
+join departments d on e.DepartmentId = d.Id
+join titles t on e.TitleId = t.Id
+group by d.Name, t.Name
+;
+
+-- 11. Write an SQL query to find all managers that have exactly 3 employees. Display their names and the name and their department. 
+select e.Name as 'EmployeeName', m.Name as 'ManagerName',d.Name as Department, COUNT(e.ManagerId) as employees
+from employees e
+join employees m on e.ManagerId = m.Id
+join departments d on e.DepartmentId = d.Id
+group by e.ManagerId
+having count(e.ManagerId) = 3;
+
+
+-- 12. Print the number of vacations per department per years requested between 2008 and 2012 along with the name of the department
+select d.Name,year(v.RequestDate), count(v.RequestDate) as numberOfVacations
+from vacations v
+join employees e on e.Id = v.EmployeeId
+join departments d on v.EmployeeId = d.Id
+where v.RequestDate >= '2008-01-01' and v.RequestDate < '2013-01-01'
+group by d.Name
+;
