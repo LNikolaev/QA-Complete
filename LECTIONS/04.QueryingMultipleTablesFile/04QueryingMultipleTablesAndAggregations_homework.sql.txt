@@ -1,7 +1,7 @@
 -- 1. Print the names of the departments and the number of employees in each of them
 SELECT d.Name, COUNT(*)
 FROM departments d
-JOIN employees e ON d.Id = e.DepartmentId
+left JOIN employees e ON d.Id = e.DepartmentId
 GROUP BY d.Name;
 
 -- 2. Print the names of the departments with more than 2 employees
@@ -16,7 +16,7 @@ ORDER BY 2
 -- 3. Print the total amount of salaries given to employees for each department
 SELECT d.Name, SUM(e.Salary) as TotalAmount, COUNT(*) as 'Employees'
 FROM departments d
-JOIN employees e ON d.Id = e.DepartmentId
+left JOIN employees e ON d.Id = e.DepartmentId
 GROUP BY d.Name
 ORDER BY 2
 ;
@@ -36,17 +36,18 @@ where name like 'M% P%';
 select e.Name, v.Name
 from employees e
 join employee_certificates ec on ec.EmployeeId = e.Id
-join vendors v on v.Id = ec.CertificateId
+join certificates c on c.Id = ec.CertificateId
+join vendors v on v.Id = c.VendorId
 where v.Name = 'Microsoft';
 
 -- 7. Print the names of all job titles in the company along with the number of job positions currently opened.
 select t.Name, count(*) as JobPositions
 from titles t
 join job_positions jp on t.Id = jp.TitleId
-group by jp.TitleId;
+group by t.Name;
 
 -- 8. Print the number of vacation requests older than two year from the current date
-select  count(distinct RequestDate)
+select  count(RequestDate)
 from vacations
 where RequestDate between adddate(current_date(), interval -2 year) and current_date();
 
