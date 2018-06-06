@@ -1,0 +1,14 @@
+когато имаме аритметична функция и поле използваме задължително GROUP BY
+
+select departmentid, sum(salary)
+from employees
+group by departmentid
+
+
+
+select departmentid,titleid, sum(salary)
+from employees
+where departmentid in (5,6,7)
+group by departmentid, titleid
+having sum(salary) > 10000
+order by 3

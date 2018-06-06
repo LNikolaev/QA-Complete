@@ -1,0 +1,24 @@
+su student
+pwd
+ls -l
+mkdir temp
+ls -l temp/
+cd temp
+mkdir projects
+ls -la projects/
+touch temp-file
+cd ..
+mv temp homework
+cd homework/projects
+pwd
+ls -la
+cd ..
+cp temp-file projects/
+cd
+pwd
+ls -l ~/projects/
+rm /home/student/homework/temp-file
+ls -l /home/student/homework
+ls -l /home/student/homework /projects
+cp -r /home/student/homework/projects /home/student/homework/projects_backup
+rm -r /home/student/homework/projects
