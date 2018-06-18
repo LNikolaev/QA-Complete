@@ -1,0 +1,8 @@
+apt-get install git -y
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime 
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+for remove the attention :
+vim ~/.vim_runtime/my_configs.vim
+and write 
+	let g:go_version_warning = 0

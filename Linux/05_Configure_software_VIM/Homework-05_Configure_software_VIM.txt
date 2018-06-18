@@ -1,0 +1,7 @@
+apt-get install apache2
+dpkg -S apache2.conf
+dpkg -P apache2
+apt-get install libncurses5
+apt-cache search ^vim
+
+
