@@ -1,24 +1,26 @@
-su student
-pwd
-ls -l
-mkdir temp
-ls -l temp/
-cd temp
-mkdir projects
-ls -la projects/
-touch temp-file
-cd ..
-mv temp homework
-cd homework/projects
-pwd
-ls -la
-cd ..
-cp temp-file projects/
-cd
-pwd
-ls -l ~/projects/
-rm /home/student/homework/temp-file
-ls -l /home/student/homework
-ls -l /home/student/homework /projects
-cp -r /home/student/homework/projects /home/student/homework/projects_backup
-rm -r /home/student/homework/projects
+1.	Влезте във вашата система като потребител student 
+2.	Разберете къде се намирате в момента
+3.	Вижте какви файлове/директории има в текущата директория
+4.	Създайте директория “temp”
+5.	Вижте какви файлове/директории има в “temp”
+6.	Създайте директория в “temp” с име “projects”
+7.	Вижте какви файлове/директории има в “projects”
+8.	Създайте файл “temp-file” в директорията “temp” 
+9.	Преименувайте директорията “temp”на “homework”
+10.	Влезте в папката “projects”
+11.	Разберете къде се намирате в момента
+12.	Вижте какви файлове/директории има в текущата директория (long format)
+13.	Копирайте файла “temp-file” в “projects”
+14.	Влезте във вашата “Home directory”
+15.	Разберете къде се намирате в момента
+16.	Вижте какви файлове/директории в “projects”
+17.	Изтрийте файла temp-file от директорията “homework”
+18.	Вижте какви файлове/директории има в директорията “homework”
+19.	Вижте какви файлове/директории има в директорията “projects”
+20.	Копирайте папката “projects” с ново име “projects_backup” в директорията “homework”
+21.	Изтрийте цялата папка “projects” от “homework”
+
+
+Допълнителна домашна (по желание): 
+
+1. Направе си свой собствен PS1 промпт изберете си цвят , може да сложите дата 

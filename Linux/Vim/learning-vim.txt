@@ -1,0 +1,21 @@
+- PayOff of learning VIM is huge.
+
+1 - If you learn something today it will payoff you everyday
+
+What to know before I start learning:
+- VIM is different from everything else
+- Don't start using it in production at the first day (first learn how to copy / paste)
+- You will stop using your mouse - you don’t need the mouse
+- Can i do ....? - Yes you can like your old text editor but better
+- There is always a better way to doing it
+- Try to learn something every week
+
+Learn VIM:
+
+dw5 - What is THAT
+
+d       w       5
+delete word     5
+
+
+Don’t remember the characters ... just ask your self what you want to do. DELETE NEXT 5 WORDS

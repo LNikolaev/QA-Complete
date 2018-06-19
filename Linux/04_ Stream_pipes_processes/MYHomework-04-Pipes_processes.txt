@@ -1,0 +1,17 @@
+ls -lh > ~/file-list
+ls -l /etc/ >> ~/file-list
+less file-list
+ls ~ ~/nosuchdir
+ls  ~ ~/nosuchdir 2> /dev/null
+ls  ~ ~/nosuchdir 1> /dev/null
+ls ~ ~/nosuchdir 2&> /dev/null
+cp /etc/shadow ~/log-list 2> /dev/null
+sleep 10000
+sleep 20000
+sleep 30000
+bg 1 2 3
+jobs
+ps -o uname,pid,comm -C sleep
+running(10000),stopped(20000),running(30000)
+pkill -f "sleep"
+ifconfig eth0 | grep "inet addr:" | cut -d ":" -f2 | cut -d " " -f1

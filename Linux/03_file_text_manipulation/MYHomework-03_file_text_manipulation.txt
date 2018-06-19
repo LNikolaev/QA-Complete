@@ -1,0 +1,25 @@
+locate LGPL-3
+cp /usr/share/common-licenses/LGPL-3 /home/LGPL-3-COPY
+cat LGPL-3-COPY
+less /etc/passwd
+cut -d ":" -f 1,6 /etc/passwd
+head -15 LGPL-3-COPY
+tail -15 LGPL-3-COPY
+grep -c "library" LGPL-3-COPY
+grep -v "public" LGPL-3-COPY
+grep -A 2 "library" LGPL-3-COPY
+grep -B 3 "library" LGPL-3-COPY
+grep -C 5 "library" LGPL-3-COPY
+grep -v "#" /etc/ssh/sshd_config | sort -d | uniq -u
+nano file.gz
+ls *.gz
+ls -lh *[0-9]*
+ls sys???
+touch 100 200 300
+ls [0-9]*
+cp LGPL-3-COPY LGPL-3-COPY-1
+tar -cvzf LGPL-3.tar.gz "LGPL-3-COPY" "LGPL-3-COPY-1"
+rm LGPL-3-COPY LGPL-3-COPY-1
+tar -tvf LGPL-3.tar.gz
+tar xzf LGPL-3.tar.gz
+ls -lh

@@ -1,7 +1,14 @@
-apt-get install apache2
-dpkg -S apache2.conf
-dpkg -P apache2
-apt-get install libncurses5
-apt-cache search ^vim
+#Software
+Инсталирайте apache версия 2 с помоща на APT
+Намерете конфигурационният файл “apache2.conf” с dpgk
+Изтрийте apache2 заедно с конфигурационните му файлове
+Инсталирайте библиотеките за пакета ncurses 
+Проверете дали пакета vim е инсталиран
 
+#VIM
+Преминете нивата от сайтовете.
+http://www.openvim.com
+http://www.vimgenius.com/lessons/vim-intro
 
+Good videos: 
+https://www.youtube.com/watch?v=Nim4_f5QUxA

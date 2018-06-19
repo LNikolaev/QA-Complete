@@ -1,25 +1,34 @@
-locate LGPL-3
-cp /usr/share/common-licenses/LGPL-3 /home/LGPL-3-COPY
-cat LGPL-3-COPY
-less /etc/passwd
-cut -d ":" -f 1,6 /etc/passwd
-head -15 LGPL-3-COPY
-tail -15 LGPL-3-COPY
-grep -c "library" LGPL-3-COPY
-grep -v "public" LGPL-3-COPY
-grep -A 2 "library" LGPL-3-COPY
-grep -B 3 "library" LGPL-3-COPY
-grep -C 5 "library" LGPL-3-COPY
-grep -v "#" /etc/ssh/sshd_config | sort -d | uniq -u
-nano file.gz
-ls *.gz
-ls -lh *[0-9]*
-ls sys???
-touch 100 200 300
-ls [0-9]*
-cp LGPL-3-COPY LGPL-3-COPY-1
-tar -cvzf LGPL-3.tar.gz "LGPL-3-COPY" "LGPL-3-COPY-1"
-rm LGPL-3-COPY LGPL-3-COPY-1
-tar -tvf LGPL-3.tar.gz
-tar xzf LGPL-3.tar.gz
-ls -lh
+Логнете се като "student"
+
+Намерете файла LGPL-3
+копирайте го във вашата home directory с име LGPL-3-COPY
+
+Използвайте "cat" ,за да видите съръджанието на LGPL-3-COPY
+
+С помоща на "cut" изкарайте на екрана потребителите на системата и тяхните шелове - Трябва само тези две колони да се виждат (разберете къде седи файла с потребителите на системата)
+
+Изкарайте на екрана първите 15 реда след това последните 15 реда от LGPL-3-COPY
+
+Във файла LGPL-3-COPY:
+
+1. На колко реда се повтаря думата "library"
+2. Махнете всички редове на които се съдържа думата "public"
+3. изкарайте 2 реда от долу след като намерите library
+4. изкарайте 3 реда от горе след като намерите library
+5. изкарайте 5 реда от горе и от долу след като намерите public
+
+Махнете всички редове започващи с # от файла /etc/ssh/sshd_config като сортирате файла и след това махнете всички уникални редове
+
+Идете до /var/log - Тук трябва да използвате 'ls' ... НЕ използвайте find / locate
+Покажете всички файлове завършващи с .gz
+Покажете всички syslog файлове които в името си съдържат число
+Покажете всичко файлове които започват с "sys" и след това имат ТРИ симовала (characters)
+Създайте файловете  100 200 300
+Покажете сички файове които започват с число
+
+Допълнителна дошмашна:
+Копирайте файла  LGPL-3-COPY в LGPL-3-COPY-1
+Направете gzip компренсиран архив с име LGPL-3.tar.gz в който са двата файла LGPL-3-COPY LGPL-3-COPY-1
+Изтрийте двата файла LGPL-3-COPY LGPL-3-COPY-1
+Проверете дали файловете ги няма
+Разархивирайте файла LGPL-3.tar.gz и проверете дали файловете са там

@@ -1,26 +1,23 @@
-mkdir /Projects
-groupadd pragmatic
-chmod 770 ~/Projects
-useradd ivan
-useradd georgi
-useradd stoyan
-mkdir /home/IvanPlace
-mkdir /home/goshoPlace
-mkdir /home/stoyanPlace
-usermod -d /home/IvanPlace ivan
-usermod -d /home/goshoPlace georgi
-usermod -d /home/stoyanPlace stoyan
-usermod -s /bin/bash ivan
-usermod -s /bin/bash georgi
-usermod -s /bin/bash stoyan
-passwd ivan
-passwd georgi
-passwd stoyan
-chmod -r georgi:georgi /home/goshoPlace/
-chmod -r ivan:ivan /home/IvanPlace/
-chmod -r stoyan:stoyan /home/stoyanPlace/
-vim ~/.bashrc umask 0007
-usermod -a -G pragmatic ivan
-usermod -a -G pragmatic georgi
-usermod -a -G pragmatic stoyan
-chgrp -hR pragmatic ~/Projects/
+Направете директория /Projects на която owner-a да е "root" а групата "pragmatic"
+Направете правата да са:
+Owner: execute , write , read
+Group : write , read , execute
+Other : БЕЗ ПРАВА
+
+Създайте три потребителя ivan, georgi , stoyan като:
+- направите да си имат лични директории в /home
+- Shell-a да им е "bash"
+
+Сложете на всеки потребител парола "qaz123WSX"  (без кавичките)
+Всички файлове които се създават от потребителите трябва да бъдат с права 660 и директориите с 770
+   - Трябва за всички потребители да е валидно не само за този с който сте влезнали 
+
+Добавете трите създадени потребители в групата "pragmatic" 
+
+В директорията /Projects направете така ,че всеки потребител да(всички останали не само който създадахте):
+- Може да създава файлове и директории
+
+
+ - Допълнително - потърсете как се настройва SUID - това са специални права
+- Когато създават файлове те винаги да бъдат създавани с групата "pragmatic"
+

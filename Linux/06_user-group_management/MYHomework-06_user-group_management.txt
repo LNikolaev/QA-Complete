@@ -1,0 +1,26 @@
+mkdir /Projects
+groupadd pragmatic
+chmod 770 ~/Projects
+useradd ivan
+useradd georgi
+useradd stoyan
+mkdir /home/IvanPlace
+mkdir /home/goshoPlace
+mkdir /home/stoyanPlace
+usermod -d /home/IvanPlace ivan
+usermod -d /home/goshoPlace georgi
+usermod -d /home/stoyanPlace stoyan
+usermod -s /bin/bash ivan
+usermod -s /bin/bash georgi
+usermod -s /bin/bash stoyan
+passwd ivan
+passwd georgi
+passwd stoyan
+chmod -r georgi:georgi /home/goshoPlace/
+chmod -r ivan:ivan /home/IvanPlace/
+chmod -r stoyan:stoyan /home/stoyanPlace/
+vim ~/.bashrc umask 0007
+usermod -a -G pragmatic ivan
+usermod -a -G pragmatic georgi
+usermod -a -G pragmatic stoyan
+chgrp -hR pragmatic ~/Projects/
