@@ -1,0 +1,23 @@
+1. Преминете трейнинга >  http://regexone.com/ 
+
+
+2. С помоща на http://regex101.com  хванете всички валидни  emails от листа по долу като можете да имате само букви , цифри , долни черти (_) и точки (.) 
+
+#### EMAIL LIST 
+lpdarfy1martk@0-o0kz46yw7o.com
+_32$a@e0audyipyz99.com
+mxhbpc2a-dh@dir.bg.bg
+lelj5hvo@ov4qk4on.co.uk
+q-4@m7pg6xe.br
+t5i5a..wo@ngf5r0.it
+_qk0h@v4w3yj7fmo9.com
+_ugu0u2cng@abv.bg
+26yoc@tso8q9cori9o.com
+re6t16t1dq8_@yahoo.com.com
+8$l@38cpng.com
+8anu+@3oc8bxp22q6.com
+0%4qeumh-1og@dir.bg
+3r6@rm1kdfpxrwvg.com
+2i0x.ikfw*nw8ll@ke3x5c1-.test.com
+
+

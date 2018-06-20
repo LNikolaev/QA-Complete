@@ -1,0 +1,8 @@
+1. Направете потребители idimitrov , pgeorgieva , saleksandrov, pdimov като се уверите ,че имат
+ shell > /bin/bash и Home директория под /home/ 
+ - Example /home/pdimov ... и така за всички останали
+2. Създайте група devops  ,  marketing  
+3. Добавете idimitrov , saleksandrov към група devops 
+4. Добавете pgeorgieva , pdimov към група marketing
+5. Създайте парола за всичките потребители като паролата е pr@gma_us3r (case sensetive)
+
