@@ -1,0 +1,18 @@
+
+ - Install apache ---- apache2-mpm-prefork
+ - open Firefox -   http://localhost:8080/
+ - rename /var/www/html/index.html index.html_backup
+
+ - open Firefox -   http://localhost:8080/
+
+install php5 module for apache2 --- search for libapache2-mod-php
+restart apache
+  - /etc/init.d/apache2 restart
+create file test.php in /var/www/html/
+
+file content:
+<?php phpinfo(); ?>
+
+Open test.php from browser: http://localhost:8080/test.php
+
+

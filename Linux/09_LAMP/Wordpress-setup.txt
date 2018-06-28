@@ -1,0 +1,162 @@
+What is WORDPRESS ?
+WordPress is a free and open source (GNU GPLv2 or later) blogging tool and a content management system (CMS) based on PHP and MySQL. 
+
+
+Setup your DOMAIN NAME a.k.a. myfirstqasite.com - ON YOUR COMPUTER NOT INSIDE Linux Virutal Machine
+#### Windows:
+Open with TEXT editor like notepad file below
+c:\Windows\System32\Drivers\etc\hosts
+
+Find line below and append your site after "localhost" 
+127.0.0.1	localhost myfirstqasite.com
+
+Example:
+127.0.0.1	localhost myfirstqasite.com
+
+!!! If you cannot write to the file save already edit file to your Desktop then copy it back to "c:\Windows\System32\Drivers\etc\hosts" 
+
+ping etsy.com
+PING etsy.com (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.053 ms
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.056 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.077 ms
+
+
+#### Linux:
+vim /etc/hosts
+
+Find line below and append your site after "localhost"
+127.0.0.1	localhost
+
+Example:
+127.0.0.1	localhost myfirstqasite.com
+
+TEST:
+ping myfirstqasite.com      <<<<< HIT CTRL+C to stop it
+
+###################################
+
+1. Install LAMP (Linux Apache Mysql Apache)
+
+Update repository
+apt-get update
+
+Install Apache2 (you should have that already):
+apt-get install apache2 apache2-mpm-prefork apache2-utils
+
+Install PHP5 , php support for mysql and apache2:
+apt-get install php5 php5-mysql libapache2-mod-php5
+
+Install MySQL server and client
+!!!!!! WARNING - be sure to setup password 123123
+apt-get install mariadb-server mariadb-client
+
+Install PHPmyadmin - Web tool for DB management
+!!!!!! WARNING - using "space" on your keyboard select apache2 on "Configuring PHPmyadmin"
+apt-get install phpmyadmin
+
+2. Download Wordpress to your HOME dir
+cd ~
+wget --no-check-certificate https://wordpress.org/latest.tar.gz
+
+2.1 UnTar wordpress
+tar xvzf latest.tar.gz
+
+2.2 Copy wordpress to apache2 ROOT DIR
+cp -r wordpress/*  /var/www/html
+
+2.2 veirfy 
+ls -lh /var/www/html
+
+2.3 Change owner to Apache user 'www-data' and change permissions
+chown -R www-data  /var/www/html
+chmod -R 755 /var/www/html
+
+2.4 Verify permissions and file location is correct
+ls -lh /var/www/html/
+
+2.5 Remove default INDEX.html file 
+rm /var/www/html/index.html
+
+
+3. Create Virtual host 
+vim /etc/apache2/sites-available/wordpress.conf
+
+Put the code below:
+#########
+
+<VirtualHost *:80>
+        ServerName myfirstqasite.com
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html
+        ErrorLog ${APACHE_LOG_DIR}/error-wordpress.log
+        CustomLog ${APACHE_LOG_DIR}/access-wordpress.log combined
+
+</VirtualHost>
+
+#########
+
+4. Enable wordpress site
+a2ensite wordpress.conf
+
+5. Restart apache2 to apply changes
+service apache2 reload
+
+Verify apache is running:
+ps aux | grep apache
+
+
+6. Create Wordpress DB
+!!!!! WARNING - After executing command below mysql will ask for passwrd which is '123123' 
+mysql -u root -p
+
+6.1 Created DB
+!!!!! WARNING - executed commands without 'mysql>' at front this is just to show you must be under mysql shell
+mysql> CREATE DATABASE IF NOT EXISTS wordpress;
+
+6.2 create user and password
+mysql> CREATE USER wordpress@localhost IDENTIFIED BY "wp_pass123";
+
+6.3 Grant permissions to user to work with DB
+mysql> GRANT ALL PRIVILEGES ON wordpress.* TO wordpress@localhost;
+
+6.4 Flush privileges and quit
+mysql> FLUSH PRIVILEGES;
+mysql> quit
+
+######## 
+
+Open your browser and type http://myfirstqasite.com:8080
+1. Choose your language - I prefer chinees is very easy to setup 
+
+2. Setup Wordpres - "Let's go"
+
+3. Configure DB with your settings - "Submit"
+
+4. Run the install
+
+5. Enter your Blog information - "install wordpress"
+
+5.1 Configure your ADMIN user and pass (its your choice) - stundet / l@n2016
+- Confirm use of weak password (NOT GOOD idea for PRODUCTION)
+
+5.2 Enter your email - IMPORTANT all notifications are going there
+
+7. Login to your wordpress  - Log in 
+
+8. Login with your user / pass 
+ - student / l@n2016
+
+
+9. Change Theme 
+- Appearance > Themes > Add New Theme > choose theme (like Counsel) > install > Activate 
+
+
+10. Make your first post.
+- From left panel choose > Posts > Add New 
+
+Title: My first QA tip 
+Body: Wordpress install done
+
+- From right side choose "PUBLISH"
+- View Post
