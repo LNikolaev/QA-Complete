@@ -1,6 +1,9 @@
 package nterfacesabstractclassespolymorphism;
 
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import static nterfacesabstractclassespolymorphism.PrintUsers.MY_DATE_FORMAT;; 
 
 public class AbstractUser implements User {
 	private String name;
@@ -41,9 +44,16 @@ public class AbstractUser implements User {
 	}
 
 	@Override
-	public String getName() {
-		
+	public String getName() {		
 		return this.name;
 	}
-
+	
+	@Override
+	public String toString() {
+		
+		MY_DATE_FORMAT.format(registrationDate);
+		return String.format("name=%7s | pwd=%10s | Date=%s | Logged=%6s", name, password,
+				MY_DATE_FORMAT.format(registrationDate), isLoggedIn);
+	}
+	
 }
