@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad7 {
+public class MyMood {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

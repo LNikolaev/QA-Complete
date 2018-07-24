@@ -1,5 +1,5 @@
 
-public class Zad04 {
+public class NumbersInReverseOrder {
 
 	public static void main(String[] args) {
 		for (int i = 10; i >= 0; i--) {

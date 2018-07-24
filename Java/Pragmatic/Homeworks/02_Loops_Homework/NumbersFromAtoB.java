@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad09 {
+public class NumbersFromAtoB {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

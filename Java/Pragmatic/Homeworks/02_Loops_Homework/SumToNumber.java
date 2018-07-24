@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad06 {
+public class SumToNumber {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad2 {
+public class OperationWithNumbers {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

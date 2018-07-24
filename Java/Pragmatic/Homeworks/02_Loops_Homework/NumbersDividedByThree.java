@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad07 {
+public class NumbersDividedByThree {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

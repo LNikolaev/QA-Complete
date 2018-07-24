@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad5 {
+public class IncreaseNumber {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

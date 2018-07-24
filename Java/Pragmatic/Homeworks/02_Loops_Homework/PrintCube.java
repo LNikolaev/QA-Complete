@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad08 {
+public class PrintCube {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
