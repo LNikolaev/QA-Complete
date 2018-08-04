@@ -1,4 +1,4 @@
-package homework.exceptions;
+package student.exceptions;
 
 @SuppressWarnings("serial")
 public class InvalidStudentAgeException extends IllegalArgumentException{

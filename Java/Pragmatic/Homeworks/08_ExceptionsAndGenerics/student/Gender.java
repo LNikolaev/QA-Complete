@@ -1,4 +1,4 @@
-package homework.exceptions;
+package student;
 
 public enum Gender {
 	MALE,

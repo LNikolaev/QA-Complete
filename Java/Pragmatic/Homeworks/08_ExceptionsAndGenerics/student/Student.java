@@ -1,4 +1,8 @@
-package homework.exceptions;
+package student;
+
+import student.exceptions.InvalidStudentAgeException;
+import student.exceptions.InvalidStudentFirstNameException;
+import student.exceptions.InvalidStudentLastNameException;
 
 public class Student {
 	private String firstName;
@@ -56,13 +60,13 @@ public class Student {
 	
 	void validateFirstName(String firstName){
 		if (firstName.length() > 12) {
-			throw new IllegalArgumentException("The length of the first name must be greater than 12 symbols.");
+			throw new InvalidStudentFirstNameException();
 		}
 	}
 	
 	void validateLastName(String lastName){
 		if (lastName.length() > 20) {
-			throw new IllegalArgumentException("The length of the last name must be less than 20 symbols.");
+			throw new InvalidStudentLastNameException();
 		}
 	}
 
