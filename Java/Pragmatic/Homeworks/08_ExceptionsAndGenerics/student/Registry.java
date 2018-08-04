@@ -28,10 +28,9 @@ public class Registry<T> {
 		elements.add(element);
 	}
 
-	void removeElementFromRegistry(String registryName) {
-		if (registryName.equals(getRegistryName())) {
-			elements.remove(registryName);
-		}
+	void removeElementFromRegistry(int index) {	
+		System.out.println(elements.get(index) + " <=== Has been successfully removed ! ");
+			elements.remove(index);		
 	}
 
 		void registryInfo() {
