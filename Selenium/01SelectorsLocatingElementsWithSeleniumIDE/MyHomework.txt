@@ -1,0 +1,50 @@
+abv.bg link 'Месечен'
+XPath
+//div[@id='astroContent']//a[@class='right']
+
+CSS
+div#astroContent .right
+
+link "Месечен"
+-----------------------------------------------------------
+life.dir.bg link 'Здраве и красота'
+
+XPath
+//li[6]/a
+
+CSS
+ul :nth-child(6)>a>span>i
+-----------------------------------------------------------
+zamunda.net link 'login'
+
+XPath
+//table[@class='bottom navmain']//td[4]
+
+CSS
+table[class='bottom navmain'] tr :nth-child(4)>a
+-----------------------------------------------------------
+dnevnik.bg link "всичко от днес"
+
+XPath
+//header[@id='header']//nav[@role='navigation']//li[2]
+
+CSS
+#header>.wrapper>nav[role=navigation]>ul>li:nth-child(3)>a
+
+link "Всичко от днес"
+-----------------------------------------------------------
+vesti.bg link search-button
+XPath
+//input[@class='search-button']
+
+CSS
+.gtm-HeaderSearch-click>input
+-----------------------------------------------------------
+siteground.com link 'enterprice hosting/learn more'
+XPath
+//section[@class='threeboxes plan enterprice']/a
+
+CSS
+section[class='threeboxes plan enterprice']>a
+-----------------------------------------------------------
+
