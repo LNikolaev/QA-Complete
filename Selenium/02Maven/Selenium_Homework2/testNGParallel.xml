@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG">
+	<test name="Test Annotations" parallel="classes">
+		<classes>
+			<class name="selenium.testNG.suite.TestDependencyUsingFacebook" />
+			<class name="selenium.testNG.suite.TestNGAssertion" />
+		</classes>
+	</test>
+</suite>
