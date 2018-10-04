@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11303" started-at="2018-10-04T11:48:18Z" finished-at="2018-10-04T11:48:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11303" started-at="2018-10-04T11:48:18Z" finished-at="2018-10-04T11:48:30Z">
+      <class name="bg.pragmatic.shop.DropdownOrders">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:bg.pragmatic.shop.DropdownOrders@77ec78b9]" name="invokeBrowser" is-config="true" duration-ms="6179" started-at="2018-10-04T11:48:18Z" finished-at="2018-10-04T11:48:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method status="PASS" signature="login()[pri:1, instance:bg.pragmatic.shop.DropdownOrders@77ec78b9]" name="login" duration-ms="3730" started-at="2018-10-04T11:48:24Z" finished-at="2018-10-04T11:48:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="ordersDropdown()[pri:0, instance:bg.pragmatic.shop.DropdownOrders@77ec78b9]" name="ordersDropdown" duration-ms="1364" started-at="2018-10-04T11:48:28Z" depends-on-methods="bg.pragmatic.shop.DropdownOrders.login" finished-at="2018-10-04T11:48:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ordersDropdown -->
+      </class> <!-- bg.pragmatic.shop.DropdownOrders -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

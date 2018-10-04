@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNG" duration-ms="15953" started-at="2018-10-03T16:28:44Z" finished-at="2018-10-03T16:29:00Z">
+    <groups>
+    </groups>
+    <test name="Test Annotations" duration-ms="15953" started-at="2018-10-03T16:28:44Z" finished-at="2018-10-03T16:29:00Z">
+      <class name="selenium.testNG.suite.TestNGAssertion">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:selenium.testNG.suite.TestNGAssertion@10bbd20a]" name="invokeBrowser" is-config="true" duration-ms="8010" started-at="2018-10-03T16:28:44Z" finished-at="2018-10-03T16:28:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method status="PASS" signature="getTitle()[pri:0, instance:selenium.testNG.suite.TestNGAssertion@10bbd20a]" name="getTitle" duration-ms="1404" started-at="2018-10-03T16:28:52Z" finished-at="2018-10-03T16:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitle -->
+      </class> <!-- selenium.testNG.suite.TestNGAssertion -->
+      <class name="selenium.testNG.suite.TestDependencyUsingFacebook">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:selenium.testNG.suite.TestDependencyUsingFacebook@48503868]" name="openBrowser" duration-ms="6339" started-at="2018-10-03T16:28:52Z" finished-at="2018-10-03T16:28:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginToFacebook()[pri:0, instance:selenium.testNG.suite.TestDependencyUsingFacebook@48503868]" name="loginToFacebook" duration-ms="388" started-at="2018-10-03T16:28:58Z" depends-on-methods="selenium.testNG.suite.TestDependencyUsingFacebook.openBrowser" finished-at="2018-10-03T16:28:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToFacebook -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium.testNG.suite.TestDependencyUsingFacebook@48503868]" name="tearDown" is-config="true" duration-ms="1175" started-at="2018-10-03T16:28:58Z" finished-at="2018-10-03T16:29:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- selenium.testNG.suite.TestDependencyUsingFacebook -->
+    </test> <!-- Test Annotations -->
+  </suite> <!-- TestNG -->
+</testng-results>
