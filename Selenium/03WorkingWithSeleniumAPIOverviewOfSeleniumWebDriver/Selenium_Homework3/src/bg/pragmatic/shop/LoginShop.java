@@ -15,7 +15,7 @@ public class LoginShop {
 	WebDriver driver;
 
 	@BeforeTest
-	public void invokeBrowser() {
+	void invokeBrowser() {
 		try {
 			System.setProperty("webdriver.gecko.driver",
 					"F:\\JAVA\\Java\\workspace\\selenium\\geckodriver-v0.21.0-win64\\geckodriver.exe");
@@ -33,11 +33,15 @@ public class LoginShop {
 	}
 
 	@Test
-	public void login() {
+	void login() {
 		driver.findElement(By.id("input-username")).sendKeys("admin");
 		driver.findElement(By.id("input-password")).sendKeys("parola123!");
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("dashboard"), "Invalid login, please try again!");
 	}
-
+	
+	@AfterTest
+	void tearDown() {
+		driver.quit();
+	}
 }

@@ -1,6 +1,7 @@
 package bg.pragmatic.shop;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,7 +19,7 @@ public class DropdownOrders {
 	WebDriver driver;
 
 	@BeforeTest
-	public void invokeBrowser() {
+	void invokeBrowser() {
 		try {
 			System.setProperty("webdriver.chrome.driver",
 					"F:\\JAVA\\Java\\SeleniumWorkSpace\\SeleniumDrivers\\chromedriver_win32\\chromedriver.exe");
@@ -35,35 +37,45 @@ public class DropdownOrders {
 	}
 
 	@Test(priority = 1)
-	public void login() {
+	void login() {
 		driver.findElement(By.id("input-username")).sendKeys("admin");
 		driver.findElement(By.id("input-password")).sendKeys("parola123!");
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase("dashboard"), "Invalid login, please try again!");
 	}
-	
+
 	@Test(dependsOnMethods = ("login"))
-	public void ordersDropdown() {
+	void ordersDropdown() {
 		driver.findElement(By.xpath("//ul[@id='menu']/li[5]")).click();
 		driver.findElement(By.xpath("//li[@id='menu-sale']/ul/li[1]")).click();
-		/*driver.findElement(By.tagName("select")).click();*/
-		/*List<String> options = driver.findElement(By.tagName("//select/option"));*/
-		
+
+		List<String> actual = new ArrayList<>();
+
+		List<String> expected = Arrays.asList("", "Missing Orders", "Canceled", "Canceled Reversal", "Chargeback",
+				"Complete", "Denied", "Expired", "Failed", "Pending", "Processed", "Processing", "Refunded", "Reversed",
+				"Shipped", "Voided");
+
 		Select make = new Select(driver.findElement(By.tagName("select")));
-		List<String> options = new ArrayList<>();
+
+		// fill the actual
 		for (WebElement option : make.getOptions()) {
-			options.add(option.getText());
+			actual.add(option.getText());
 		}
-		for (String string : options) {
-			System.out.println(string + " ");
+
+		dropDownEqualArraysValues(actual, expected);
+	}
+
+	@AfterTest
+	void tearDown() {
+		driver.quit();
+	}
+
+	private void dropDownEqualArraysValues(List<String> actual, List<String> expected) {
+		try {
+			Assert.assertEquals(actual, expected);
+		} catch (AssertionError e) {
+			System.out.println("Different elements or size in dropdown");
+			throw e;
 		}
-		
-		/*
-		 * List<String> exp_options = Arrays.asList(new String[]{"Today", "This Week",
-		 * "This Month","This Year"}); List<String> act_options = new
-		 * ArrayList<String>(); for(WebElement option : make.getOptions())
-		 * act_options.add(option.getText());
-		 * assertArrayEquals(exp_options.toArray(),act_options.toArray());
-		 */
 	}
 }

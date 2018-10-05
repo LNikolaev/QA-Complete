@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG">
+	<test name="Test Annotations" parallel="classes">
+		<classes>
+			<class name="bg.pragmatic.shop.DropdownOrders" />
+			<class name="bg.pragmatic.shop.FailLogin" />
+			<class name="bg.pragmatic.shop.LoginShop" />
+			<class name="bg.pragmatic.shop.multipleColorSellect" />
+		</classes>
+	</test>
+</suite>
