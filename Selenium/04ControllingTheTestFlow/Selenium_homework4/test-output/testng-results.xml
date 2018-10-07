@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11812" started-at="2018-10-07T11:39:12Z" finished-at="2018-10-07T11:39:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11812" started-at="2018-10-07T11:39:12Z" finished-at="2018-10-07T11:39:24Z">
+      <class name="findRestorant.LocateRestorant">
+        <test-method status="PASS" signature="testWithWait()[pri:0, instance:findRestorant.LocateRestorant@44c8afef]" name="testWithWait" duration-ms="11787" started-at="2018-10-07T11:39:12Z" finished-at="2018-10-07T11:39:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWithWait -->
+      </class> <!-- findRestorant.LocateRestorant -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
