@@ -10,6 +10,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+/**
+ * @author Lubo
+ * This class present negative login
+ */
+
 public class FailLogin {
 	WebDriver driver;
 

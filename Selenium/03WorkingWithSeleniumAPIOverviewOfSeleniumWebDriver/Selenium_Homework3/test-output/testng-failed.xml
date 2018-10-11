@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="bg.pragmatic.shop.FailLogin">
+      <class name="bg.pragmatic.shop.Demos.TestExampleDemos">
         <methods>
-          <include name="login"/>
-          <include name="invokeBrowser"/>
+          <include name="testWithOutWait"/>
         </methods>
-      </class> <!-- bg.pragmatic.shop.FailLogin -->
+      </class> <!-- bg.pragmatic.shop.Demos.TestExampleDemos -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

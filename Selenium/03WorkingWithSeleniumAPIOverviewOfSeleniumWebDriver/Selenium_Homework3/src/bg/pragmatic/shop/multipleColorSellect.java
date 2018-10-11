@@ -17,8 +17,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class multipleColorSellect {
 
+/**
+ * @author Lubo
+ * This class present multiple choice on dropdown, and check that our custom options is selected.
+ */
+public class multipleColorSellect {	
+	
 	WebDriver driver;
 
 	@BeforeTest
@@ -73,6 +78,11 @@ public class multipleColorSellect {
 		driver.quit();
 	}
 	
+	/**
+	 * The method compare the values of two arrays
+	 * @param actual from html select
+	 * @param expected our expecred options
+	 */
 	private void dropDownEqualArraysValues(List<String> actual, List<String> expected) {
 		try {
 			Assert.assertEquals(actual, expected);

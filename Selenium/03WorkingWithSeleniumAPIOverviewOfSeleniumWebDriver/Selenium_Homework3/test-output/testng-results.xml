@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9144" started-at="2018-10-05T11:53:55Z" finished-at="2018-10-05T11:54:04Z">
+  <suite name="Default suite" duration-ms="10564" started-at="2018-10-10T08:50:58Z" finished-at="2018-10-10T08:51:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9144" started-at="2018-10-05T11:53:55Z" finished-at="2018-10-05T11:54:04Z">
-      <class name="bg.pragmatic.shop.FailLogin">
-        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:bg.pragmatic.shop.FailLogin@31f924f5]" name="invokeBrowser" is-config="true" duration-ms="8390" started-at="2018-10-05T11:53:55Z" finished-at="2018-10-05T11:54:04Z">
+    <test name="Default test" duration-ms="10564" started-at="2018-10-10T08:50:58Z" finished-at="2018-10-10T08:51:08Z">
+      <class name="bg.pragmatic.shop.LoginShop">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:bg.pragmatic.shop.LoginShop@43d7741f]" name="invokeBrowser" is-config="true" duration-ms="7685" started-at="2018-10-10T08:50:58Z" finished-at="2018-10-10T08:51:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeBrowser -->
-        <test-method status="PASS" signature="login()[pri:0, instance:bg.pragmatic.shop.FailLogin@31f924f5]" name="login" duration-ms="710" started-at="2018-10-05T11:54:04Z" finished-at="2018-10-05T11:54:04Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:bg.pragmatic.shop.LoginShop@43d7741f]" name="login" duration-ms="1938" started-at="2018-10-10T08:51:05Z" finished-at="2018-10-10T08:51:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-      </class> <!-- bg.pragmatic.shop.FailLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:bg.pragmatic.shop.LoginShop@43d7741f]" name="tearDown" is-config="true" duration-ms="889" started-at="2018-10-10T08:51:07Z" finished-at="2018-10-10T08:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- bg.pragmatic.shop.LoginShop -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

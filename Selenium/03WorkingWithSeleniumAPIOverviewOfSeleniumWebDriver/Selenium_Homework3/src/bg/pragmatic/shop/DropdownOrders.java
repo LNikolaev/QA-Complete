@@ -15,6 +15,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+/**
+ * @author Lubo
+ * This class compare items from dropdown select
+ */
+
 public class DropdownOrders {
 	WebDriver driver;
 
@@ -70,6 +75,11 @@ public class DropdownOrders {
 		driver.quit();
 	}
 
+	/**
+	 * The method compare the values of two arrays
+	 * @param actual from html select
+	 * @param expected our expecred options
+	 */
 	private void dropDownEqualArraysValues(List<String> actual, List<String> expected) {
 		try {
 			Assert.assertEquals(actual, expected);
