@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test runner" parallel="methods" thread-count="4">
+    <test name="Thread per method">
+        <packages>
+            <package name="bg.pragmatic.tests.*"/>
+        </packages>
+    </test>
+</suite>
