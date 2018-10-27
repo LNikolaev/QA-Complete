@@ -1,0 +1,105 @@
+Title: Validation of email field for newsletter 
+registration is completely missing
+
+Title: Validation of email field for newsletter 
+registration is allowing blank or invalid emails to be registered
+
+Title: User is able to register for newsletter 
+feed with invalid or  blank email
+
+Severity: 3/Major
+Priority: Mid
+Environment: Chrome, Firefox, Edge
+
+Description:
+Summary: Validation of the email field is allowing users to register any kind
+of string as email, including blank string.
+Expected Result: Only valid emails should be allowed. Error message is displayed
+in case of invalid or blank email
+Actual Result: Any kind of string can be entered and will be accepted
+
+Steps to reproduce:
+1. Navigate to ITeventz.bg
+2. Scroll down to news feed section
+3. Enter blank/aaaaaaaa as email
+4. Accept site rules
+5. Click Sign in Button
+
+Test Case: Cant register for news feed with invalid or blank email
+Test Case: Register for news feed with invalid or blank email
+Test Case: Can register for news feed with valid email [7-50]
+
+Title: User cant search for training by city and year combined
+Title: Dropdown options for filtering trainings by city and year reset each other
+
+Severity: 3/Major
+Priority: High
+Environment: Chrome, Firefox, Edge
+Version: 1.4, 1,7, 2.3, Beta
+
+Description:
+Summary: Its not possible to search for specific year and city at the same time.
+User option is not persisted properly during page refresh.
+Expected Result: Should be possible to combine both filters(city, year)
+Actual Result: Filters cant be combined
+
+Steps to reproduce:
+1. Navigate to iteventz.bg
+2. From main menu click on Trainings link
+3. Select Year and City
+4. Observe behavior
+
+Test Case: Search for trainings
+1. Navigate to  homepage
+2. From main menu click on Trainings link
+3. Select Year=2017 and City=Sofia   | Only trainings for Sofia(2017) should visible
+4. Observe behavior
+
+Test Case: Can search for trainings
+
+
+
+Title: User is able to select input and output file type to be identical
+Title: Identical file types can be selected for input/output conversion
+Title: Dropdowns for input/output file type contain invalid/duplicate options
+Severity: 4
+Priority: Medium
+Environment: Firefox, Chrome, Edge
+
+Description:
+User is able to select identical input/output file type which is basically 
+not suitable for conversion at all.
+Expected Result: Only valid file types are displayed
+INPUT: PDF OUTPUT: WORD, PPT
+INPUT: PPT OUTPUT: PDF
+INPUT: WORD OUTPUT: PDF
+Actual Result: Same type can be select for both dropdowns
+
+Steps to reproduce:
+1. Navigate to WordToPdf.com
+2. Select input file type = PDF | Select output file type = PDF
+
+
+Test Case: Cant convert to identical file type
+
+Test Case: Convert to identical file type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
