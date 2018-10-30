@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11883" started-at="2018-10-30T19:55:36Z" finished-at="2018-10-30T19:55:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11883" started-at="2018-10-30T19:55:36Z" finished-at="2018-10-30T19:55:48Z">
+      <class name="bg.pragmatic.shop.PositiveRegister">
+        <test-method status="PASS" signature="invokeBrowser()[pri:0, instance:bg.pragmatic.shop.PositiveRegister@7dc222ae]" name="invokeBrowser" is-config="true" duration-ms="5143" started-at="2018-10-30T19:55:36Z" finished-at="2018-10-30T19:55:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method status="PASS" signature="register()[pri:0, instance:bg.pragmatic.shop.PositiveRegister@7dc222ae]" name="register" duration-ms="4409" started-at="2018-10-30T19:55:41Z" finished-at="2018-10-30T19:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="login()[pri:0, instance:bg.pragmatic.shop.PositiveRegister@7dc222ae]" name="login" duration-ms="2309" started-at="2018-10-30T19:55:46Z" depends-on-methods="bg.pragmatic.shop.PositiveRegister.register" finished-at="2018-10-30T19:55:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- bg.pragmatic.shop.PositiveRegister -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
